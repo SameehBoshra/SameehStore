@@ -21,6 +21,12 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+        \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRoutes::class,
+        \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter::class,
+        \Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect::class,
+        \Mcamara\LaravelLocalization\Middleware\LocaleCookieRedirect::class,
+        \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationViewPath::class
+
     ];
 
     /**
@@ -64,5 +70,11 @@ class Kernel extends HttpKernel
         'signed' => \App\Http\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'localize'                => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRoutes::class,
+        'localizationRedirect'    => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationRedirectFilter::class,
+        'localeSessionRedirect'   => \Mcamara\LaravelLocalization\Middleware\LocaleSessionRedirect::class,
+        'localeCookieRedirect'    => \Mcamara\LaravelLocalization\Middleware\LocaleCookieRedirect::class,
+        'localeViewPath'          => \Mcamara\LaravelLocalization\Middleware\LaravelLocalizationViewPath::class
+
     ];
 }
