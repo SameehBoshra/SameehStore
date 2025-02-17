@@ -8,6 +8,7 @@
 .menu-expanded {
     width: 250px !important;
 }
+
 </style>
 
 
@@ -15,7 +16,7 @@
 
 
 <div class="main-menu menu-fixed menu-light menu-accordion  menu-shadow"  data-scroll-to-active="true">
-    <div class="main-menu-content">
+    <div class="main-menu-content hidden-content ">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
 
             <li class="nav-item active"><a href=""><i class="la la-mouse-pointer"></i><span
@@ -73,6 +74,59 @@
                     </li>
                 </ul>
             </li>
+
+            {{--  Brands  --}}
+            <li class="nav-item"><a href=""><i class="la la-group"></i>
+                <span class="menu-title" data-i18n="nav.dash.main"> {{trans('msg.branddepartments')}}   </span>
+                <span
+                    class="badge badge badge-danger badge-pill float-right mr-2"> {{ App\Models\Brand::count() }}
+                </span>
+            </a>
+            <ul class="menu-content">
+                <li class="active"><a class="menu-item" href="{{route('dashboard.brands.index')}}"
+                                      data-i18n="nav.dash.ecommerce"> {{trans('msg.showall')}}  </a>
+                </li>
+                <li><a class="menu-item" href="{{route('dashboard.brands.create')}}" data-i18n="nav.dash.crypto">
+                    {{trans('msg.add_brand_department')}}                        </a>
+                </li>
+            </ul>
+        </li>
+        {{--  Tags  --}}
+        <li class="nav-item"><a href=""><i class="la la-group"></i>
+            <span class="menu-title" data-i18n="nav.dash.main"> {{trans('msg.tagpage')}}   </span>
+            <span
+                class="badge badge badge-danger badge-pill float-right mr-2"> {{ App\Models\Tag::count() }}
+            </span>
+        </a>
+        <ul class="menu-content">
+            <li class="active"><a class="menu-item" href="{{route('dashboard.tags.index')}}"
+                                  data-i18n="nav.dash.ecommerce"> {{trans('msg.showall')}}  </a>
+            </li>
+            <li><a class="menu-item" href="{{route('dashboard.tags.create')}}" data-i18n="nav.dash.crypto">
+                {{trans('msg.addtagpart')}}                        </a>
+            </li>
+        </ul>
+    </li>
+
+
+            {{--  products  --}}
+            <li class="nav-item"><a href=""><i class="la la-group"></i>
+                    <span class="menu-title" data-i18n="nav.dash.main"> {{trans('msg.productpage')}}   </span>
+                    <span
+                        class="badge badge badge-danger badge-pill float-right mr-2"> {{ App\Models\Tag::count() }}
+            </span>
+                </a>
+                <ul class="menu-content">
+                    <li class="active"><a class="menu-item" href="{{route('dashboard.tags.index')}}"
+                                          data-i18n="nav.dash.ecommerce"> {{trans('msg.showall')}}  </a>
+                    </li>
+                    <li><a class="menu-item" href="{{route('dashboard.product.general.create')}}" data-i18n="nav.dash.crypto">
+                            {{trans('msg.addproductpart')}}                        </a>
+                    </li>
+                </ul>
+            </li>
+
+
 
             <li class="nav-item"><a href=""><i class="la la-male"></i>
                     <span class="menu-title" data-i18n="nav.dash.main">المتاجر  </span>

@@ -4,8 +4,11 @@ use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Dashboard\LoginController;
 use App\Http\Controllers\Dashboard\MainCategoryController;
 use App\Http\Controllers\Dashboard\SubCategoryController;
+use App\Http\Controllers\Dashboard\BrandController;
 use App\Http\Controllers\Dashboard\ProfileController;
 use App\Http\Controllers\Dashboard\ShippingMethodController;
+use App\Http\Controllers\Dashboard\TagController;
+use App\Http\Controllers\Dashboard\ProductController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Illuminate\Support\Facades\Auth;
@@ -99,6 +102,43 @@ Route::group(['prefix'=>'subCategory'] , function()
 ######################## end subcategory################
 
 
+######################## route brands################
+Route::group(['prefix'=>'brands'] , function()
+{
+    Route::get('/', [BrandController::class ,'index'])->name('dashboard.brands.index');
+    Route::get('create', [BrandController::class ,'create'])->name('dashboard.brands.create');
+    Route::post('store', [BrandController::class ,'store'])->name('dashboard.brands.store');
+    Route::get('edit/{id}', [BrandController::class ,'edit'])->name('dashboard.brands.edit');
+    Route::post('update/{id}', [BrandController::class ,'update'])->name('dashboard.brands.update');
+    Route::get('destroy/{id}', [BrandController::class ,'destroy'])->name('dashboard.brands.destroy');
+
+});
+######################## end brands################
+
+########################  tags################
+    Route::group( ['prefix' => 'tags'] ,function()
+    {
+        Route::get('/', [TagController::class ,'index'])->name('dashboard.tags.index');
+        Route::get('create', [TagController::class ,'create'])->name('dashboard.tags.create');
+        Route::post('store', [TagController::class ,'store'])->name('dashboard.tags.store');
+        Route::get('edit/{id}', [TagController::class ,'edit'])->name('dashboard.tags.edit');
+        Route::post('update/{id}', [TagController::class ,'update'])->name('dashboard.tags.update');
+        Route::get('destroy/{id}', [TagController::class ,'destroy'])->name('dashboard.tags.destroy');
+    });
+######################## end tags################
+
+
+    ########################  Products################
+    Route::group( ['prefix' => 'products'] ,function()
+    {
+        Route::get('/', [ProductController::class ,'index'])->name('dashboard.product.index');
+        Route::get('general', [ProductController::class ,'create'])->name('dashboard.product.general.create');
+        Route::post('store_general', [ProductController::class ,'store'])->name('dashboard.product.store_general.store');
+        Route::get('edit/{id}', [ProductController::class ,'edit'])->name('dashboard.product.edit');
+        Route::post('update/{id}', [ProductController::class ,'update'])->name('dashboard.product.update');
+        Route::get('destroy/{id}', [ProductController::class ,'destroy'])->name('dashboard.product.destroy');
+    });
+######################## end products################
 
 
 

@@ -20,17 +20,13 @@ class DatabaseSeeder extends Seeder
         // ]);
 
 
-        $this->call([
-            SettingDataBaseSeeder::class,
-        ]);
-        $this->call([
-            AdminDatabaseSeeder::class,
-        ]);
-        $this->call([
+        $this->call([SettingDataBaseSeeder::class,]);
+        $this->call([AdminDatabaseSeeder::class,]);
+       /*  $this->call([
             CategoryDataBaseSeeder::class,
-        ]); $this->call([
-            SubCategoryDataBaseSeeder::class,
-        ]);
+        ]);  */
+        $this->call([SubCategoryDataBaseSeeder::class,]);
+        $this->call([ProductDataBaseSeeder::class,]);
 
     }
 }

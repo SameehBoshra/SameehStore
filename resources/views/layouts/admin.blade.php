@@ -38,7 +38,7 @@
     <!-- END VENDOR CSS-->
     <!-- BEGIN MODERN CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/'.getfolder().'/app.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/'.getfolder().'/custom-rtl.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/css-rtl/custom-rtl.css')}}">
     <!-- END MODERN CSS-->
     <!-- BEGIN Page Level CSS-->
     <link rel="stylesheet" type="text/css"
@@ -52,7 +52,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/vendors/css/extensions/timedropper.min.css')}}">
     <!-- END Page Level CSS-->
     <!-- BEGIN Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/'.getfolder().'/style-rtl.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('assets/admin//style-rtl.css')}}">
     <!-- END Custom CSS-->
     @notify_css
     @yield('style')

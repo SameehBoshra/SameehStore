@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Controllers\Enumeration\CategoryType;
 class MainCategoryController extends Controller
 {
     /**
@@ -13,7 +14,7 @@ class MainCategoryController extends Controller
      */
     public function index()
     {
-       $categories= Category::whereNull('parent_id')->orderBy('id','DESC')->paginate(100);
+       $categories= Category::with('_parent')->orderBy('id','DESC')->paginate(100);
        return view('dashboard.category.index' ,compact('categories'));
 
     }
@@ -23,7 +24,8 @@ class MainCategoryController extends Controller
      */
     public function create()
     {
-        return view('dashboard.category.create');
+        $categories=Category::select('id','parent_id')->get();
+        return view('dashboard.category.create' ,compact('categories'));
     }
 
 
@@ -33,6 +35,7 @@ public function store(Request $request)
         // Validate input
         $validator = Validator::make($request->all(), [
             'name' => 'required|min:3|max:100',
+            'type' =>'required|in:1,2',
             'slug' => 'required|unique:categories,slug'.$request->id,
         ]);
 
@@ -43,13 +46,19 @@ public function store(Request $request)
         // Automatically set 'is_active' based on input (default to 0)
         $request->merge(['is_active' => $request->has('is_active') ? 1 : 0]);
 
-        // Create category
-        Category::create($request->only(['slug', 'name', 'is_active']));
+        if($request->type==CategoryType::mainCategory)
+        {
+            $request->merge(['parent_id' => null]);
 
-        return redirect()->route('dashboard.Category.index')->with(['success' => trans('msg.Categoryaddsuccess')]);
+        }
+
+        // Create category
+        Category::create($request->except(['_token','type']));
+
+        return redirect()->route('dashboard.Category.index')->with(['success' => trans('msg.messageadd')]);
     } catch (\Exception $ex) {
         return redirect()->route('dashboard.Category.index')->with(['error' => trans('msg.Somethingwrong')]);
-    }
+   }
 }
 
     /**
@@ -132,6 +141,7 @@ public function store(Request $request)
     {
         try{
             $category =Category::orderBy('id','DESC')->find($id);
+            $category->delete();
 
             return redirect()->route('dashboard.Category.index')->with(['success'=>trans('msg.DeleteCategorySucessfully')]);
         }catch(\Exception $e)

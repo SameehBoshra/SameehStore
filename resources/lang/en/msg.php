@@ -22,6 +22,7 @@ return [
 'Shipping'=>'Shipping Method',
 'shippingfree'=>'Free Shipping' ,
 'shippingin'=>'Local Pickup ',
+
 'shippingout'=>'Flat Rate',
 'productnumber'=>'Product Number',
 'allproduct'=>'All Order',
@@ -55,7 +56,7 @@ return [
 'dataofpart'=>'Data Department  ',
 'namepart'=>'Name Department  ',
 'slugname'=>' Slug',
-'active'=>'Active',
+'status'=>'Status',
 'allmainpart'=>'All Main Departments  ',
 'part'=>' Department ',
 'actions'=>'Actions',
@@ -80,6 +81,60 @@ return [
 'ٍSubCategoryaddsuccess'=>'ٍSub Category Add Successfully',
 'SupCategoryupdatesuccess'=>'Sub Category Update Successfully',
 'DeleteSubCategorySucessfully'=>'Delete Sub Category Sucessfully ',
+
+//brand
+'brandpage'=>'Brands Page',
+'brandpart'=>'Brands  ',
+'allbrandpart'=>'All Brands   ',
+'addbrandpart'=>'Add Brands  ',
+'brandnamepart'=>'Name Brand ',
+'dataofbrandpart'=>'Data Brand   ',
+'editbrandpart'=>'Edit Brands ',
+'branddepartments'=>'Brands',
+'add_brand_department'=>'Add Brands  ',
+'DeletebrandCategorySucessfully'=>'Delete Brand Sucessfully ',
+'brandupdatesuccess'=>'Brand Update Successfully',
+'ٍbrandCategoryaddsuccess'=>'Brand Add Successfully',
+'brandname' => 'Brand Name',
+'brandphoto'=>'Photo Of Brand',
+
+
+//tag
+'tagpage'=>'Tags ',
+'tagpart'=>'Tags  ',
+'alltagpart'=>'All Tags',
+'addtagpart'=>'Add new Tag',
+'tagname'=>'Tag Name',
+'dataoftagpart'=>'Data Of Tag',
+'edittagpart'=>'Edit Tah ',
+'messagedelete'=>'Delete Successfully',
+'messageupdate'=>'Update Successfully',
+'messageadd'=>' Add Successfully',
+'tagnotfound'=>'Tag Not Found',
+
+
+
+
+'mainPart'=>'Main Department',
+'subPart'=>'Sub Department',
+'nameofdepart'=>'Name Of Department',
+
+//products
+'productpage'=>'Products',
+'productpart'=>'Products  ',
+'allproductpart'=>'All Products',
+'addproductpart'=>'Add new Product',
+'productname'=>'Product Name',
+'dataofproductpart'=>'Data Of Products',
+'editproductpart'=>'Edit Product ',
+'productnotfound'=>'Product Not Found',
+'choosetag'=>'Product Not Found',
+'pleasechoosetag'=>'Please Choose Brand ',
+'pleasechoosebrand'=>'Please Choose Tag ',
+'choosebrand'=>'choose Brand ',
+'dataofproduct'=>'Data Of Product ',
+'description'=>'Product Description ',
+'short_description'=>'Product Description short ',
 
 
 

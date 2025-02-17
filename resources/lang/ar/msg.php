@@ -22,10 +22,13 @@ return [
 'shippingfree'=>'التوصيل مجاني' ,
 'shippingin'=>' النوصيل الداخلي ',
 'shippingout'=>' التوصيل الخارجي',
+
 'customernumber'=>'عدد العملاء',
 'productnumber'=>'عدد المنتاجات',
 'allproduct'=>'أجمالي الطلبات',
 'allseller'=>'أجمالي المبيعات',
+
+
 'hi'=>'مرحبا',
 'shippingMethod'=>'طرق التوصيل ',
 'dataofshippingmethod'=>'بيانات طريقة التوصيل',
@@ -55,7 +58,7 @@ return [
 'dataofpart'=>'بيانات القسم ',
 'namepart'=>'اسم القسم ',
 'slugname'=>'الاسم بالرابط',
-'active'=>'الحالة',
+'status'=>'الحالة',
 'allmainpart'=>'جميع الاقسام الرئيسية',
 'part'=>' القسم ',
 'actions'=>'الإجراءات',
@@ -81,10 +84,60 @@ return [
 'SupCategoryupdatesuccess'=>'ٍتم تحديث المنتج الفرعي بنجاح  ',
 'DeleteSubCategorySucessfully'=>'ٍتم حذف المنتج الفرعي بنجاح  ',
 
+//brand
+'brandpage'=>'الماركات ',
+'brandpart'=>'الماركات التجارية ',
+'allbrandpart'=>'جميع الماركات     ',
+'addbrandpart'=>'أضافة ماركة جديده  ',
+'brandnamepart'=>'أسم الماركة ',
+'dataofbrandpart'=>'بيانات الماركة   ',
+'editbrandpart'=>'تعديل الماركة ',
+'branddepartments'=>'الماركات',
+'add_brand_department'=>'أضافة ماركة جديد ',
+'DeletebrandCategorySucessfully'=>'تم حذف الماركة بنجاح  ',
+'brandupdatesuccess'=>'تم تحديث الماركة بنجاح ',
+'ٍbrandCategoryaddsuccess'=>'تم أضافة الماركة بنجاح ',
+'brandname' => 'أسم الماركة',
+'brandphoto'=>'صورة الماركة ' ,
+
+//tag
+'tagpage'=>'العلامات ',
+'tagpart'=>'العلامات  ',
+'alltagpart'=>'جميع العلامات ',
+'addtagpart'=>'أضافة علامة جديده  ',
+'tagname'=>'أسم العلامة ',
+'dataoftagpart'=>'بيانات العلامة    ',
+'edittagpart'=>'تعديل العلامة ',
+'messagedelete'=>'تم الحذف بنجاح ',
+'messageupdate'=>' تم التحديث بنجاح ',
+'messageadd'=>'  تم الاضافة بنجاح',
+'tagnotfound'=>'لا توجد علامة ',
 
 
 
-''=>'',
+
+'mainPart'=>'قسم رئيسي ',
+'subPart'=>'قسم فرعي ',
+'nameofdepart'=>'أسم القسم ',
+
+    //products
+'productpage'=>'المنتجات ',
+'productpart'=>'المنتجات  ',
+'allproductpart'=>'كل المنتجات',
+'addproductpart'=>'أضافة منتج جديد',
+'productname'=>'أسم المنتج',
+'dataofproductpart'=>'بيانات المنتج',
+'editproductpart'=>'تعديل المنتج ',
+'productnotfound'=>'المنتج المطلوب غير موجود',
+'choosetag'=>'أختار العلامة الدلالية',
+'choosebrand'=>'أختار الماركة ',
+'pleasechoosetag'=>'من فضلك أختار العلامة ',
+'pleasechoosebrand'=>'من فضلك أختار الماركة ',
+'dataofproduct'=>'بيانات المنتج ',
+'description'=>'وصف المنتج ',
+'short_description'=>'الوصف المختصر ',
+
+    ''=>'',
 ''=>'',
 ''=>'',
 ''=>'',

@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Create Category')
+@section('title', 'Create Sub Category')
 
 @section('content')
 
@@ -11,12 +11,12 @@
                     <div class="row breadcrumbs-top">
                         <div class="breadcrumb-wrapper col-12">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="">{{trans('msg.mainpage')}} </a>
+                                <li class="breadcrumb-item"><a href="">{{trans('msg.brandpage')}} </a>
                                 </li>
-                                <li class="breadcrumb-item"><a href=""> {{trans('msg.mainpart')}} </a>
+                                <li class="breadcrumb-item"><a href=""> {{trans('msg.brandpart')}} </a>
                                 </li>
                                 <li class="breadcrumb-item active">
-                                    {{trans('msg.addmainpart')}}
+                                    {{trans('msg.addbrandpart')}}
                                 </li>
                             </ol>
                         </div>
@@ -30,7 +30,7 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title" id="basic-layout-form"> {{trans('msg.addmainpart')}} </h4>
+                                    <h4 class="card-title" id="basic-layout-form"> {{trans('msg.addbrandpart')}} </h4>
                                     <a class="heading-elements-toggle"><i
                                             class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
@@ -46,12 +46,13 @@
                                 @include('dashboard.includes.alerts.errors')
                                 <div class="card-content collapse show">
                                     <div class="card-body">
-                                        <form class="form" action="{{route('dashboard.Category.store')}}"
+                                        <form class="form" action="{{route('dashboard.brands.store')}}"
                                               method="POST"
                                               enctype="multipart/form-data">
                                             @csrf
+
                                             <div class="form-group">
-                                                <label> صوره القسم </label>
+                                                <label> {{trans('msg.brandphoto')}}  </label>
                                                 <label id="projectinput7" class="file center-block">
                                                     <input type="file" id="file" name="photo">
                                                     <span class="file-custom"></span>
@@ -63,12 +64,15 @@
 
                                             <div class="form-body">
 
-                                                <h4 class="form-section"><i class="ft-home"></i> {{trans('msg.dataofpart')}}  </h4>
+                                                <h4 class="form-section"><i class="ft-home"></i> {{trans('msg.dataofbrandpart')}}  </h4>
                                                         <div class="row">
+
+
+
 
                                                             <div class="col-md-6">
                                                                 <div class="form-group">
-                                                                    <label for="projectinput1"> {{trans('msg.namepart')}}  </label>
+                                                                    <label for="name"> {{trans('msg.brandnamepart')}}  </label>
                                                                     <input type="text" value="{{old('name')}}" id="name"
                                                                            class="form-control"
                                                                            placeholder="  "
@@ -77,42 +81,6 @@
                                                                            <span class="text-danger">  {{$message}} </span>
                                                                            @enderror
 
-                                                                </div>
-                                                            </div>
-                                                                <div class="col-md-6">
-                                                                    <div class="form-group">
-                                                                        <label for="projectinput1"> {{trans('msg.slugname')}} </label>
-                                                                        <input type="text" value="{{old('slug')}}" id="slug"
-                                                                               class="form-control"
-                                                                               placeholder="  "
-                                                                               name="slug">
-                                                                               @error("slug")
-                                                                               <span class="text-danger">  {{$message}} </span>
-                                                                               @enderror
-
-                                                                    </div>
-                                                                </div>
-
-
-
-
-                                                                <div class="col-md-12 row hidden"  id="category_list">
-                                                                    <div class="form-group">
-                                                                        <label for="projectinput1"> {{trans('msg.chooseDepart')}}  </label>
-                                                                       <select name="parent_id" class="select2 form-control">
-                                                                        <optgroup label="{{trans('msg.pleasechoosedepart')}}">
-                                                                            @if($categories && $categories ->count()>0)
-                                                                                @foreach ($categories as $category)
-                                                                                    <option value={{$category->id}}>{{$category->name}}</option>
-                                                                                @endforeach
-                                                                                @endif
-                                                                        </optgroup>
-                                                                       </select>
-                                                                               @error("parent_id")
-                                                                               <span class="text-danger">  {{$message}} </span>
-                                                                               @enderror
-
-                                                                    </div>
                                                                 </div>
 
 
@@ -129,36 +97,6 @@
                                                                         @error("is_active")
                                                                         <span class="text-danger"> {{$messages}}</span>
                                                                         @enderror
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group mt-1">
-                                                                        <input type="radio"
-                                                                               value="1"
-                                                                               name="type"
-                                                                               class="switchery"
-                                                                               data-color="success"
-                                                                               checked
-                                                                               />
-                                                                        <label for="type"
-                                                                               class="card-title ml-1">{{trans('msg.mainPart')}}
-                                                                             </label>
-                                                                    </div>
-                                                                </div>
-
-                                                                <div class="col-md-3">
-                                                                    <div class="form-group mt-1">
-                                                                        <input type="radio"
-                                                                               value="2"
-                                                                               name="type"
-                                                                               class="switchery"
-                                                                               data-color="success"
-
-                                                                               />
-                                                                        <label for="type"
-                                                                               class="card-title ml-1">{{trans('msg.subPart')}}
-                                                                             </label>
                                                                     </div>
                                                                 </div>
 
@@ -192,22 +130,3 @@
 
 
 @endsection
-
-@section('script')
-<script>
-    $('input:radio[name="type"]').change(
-        function()
-        {
-            if(this.checked&&this.value=='2')
-        {
-            $('#category_list').removeClass('hidden');
-        }
-        else
-        {
-            $('#category_list').addClass('hidden');
-
-        }
-        }
-    );
-</script>
-@stop
