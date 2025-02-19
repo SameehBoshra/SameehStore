@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Create Category')
+@section('title', 'Create Product')
 
 @section('content')
 
@@ -55,146 +55,146 @@
                                             <div class="form-body">
 
                                                 <h4 class="form-section"><i class="ft-home"></i> {{trans('msg.dataofproduct')}}  </h4>
-                                                        <div class="row">
+                                                <div class="row">
 
-                                                            <div class="col-md-6 col-sm-12">
-                                                                <div class="form-group">
-                                                                    <label for="projectinput1"> {{trans('msg.productname')}}  </label>
-                                                                    <input type="text" value="{{old('name')}}" id="name"
-                                                                           class="form-control"
-                                                                           placeholder="  "
-                                                                           name="name">
-                                                                           @error("name")
-                                                                           <span class="text-danger">  {{$message}} </span>
-                                                                           @enderror
-
-                                                                </div>
-                                                            </div>
-                                                                <div class="col-md-6 col-sm-12">
-                                                                    <div class="form-group">
-                                                                        <label for="projectinput1"> {{trans('msg.slugname')}} </label>
-                                                                        <input type="text" value="{{old('slug')}}" id="slug"
-                                                                               class="form-control"
-                                                                               placeholder="  "
-                                                                               name="slug">
-                                                                               @error("slug")
-                                                                               <span class="text-danger">  {{$message}} </span>
-                                                                               @enderror
-
-                                                                    </div>
-                                                                </div>
-
-                                                            <div class="col-md-6 col-sm-12">
-                                                                <div class="form-group">
-                                                                    <label for="projectinput1"> {{trans('msg.description')}} </label>
-                                                                    <input type="text" value="{{old('description')}}" id="description"
-                                                                           class="form-control"
-                                                                           placeholder="  "
-                                                                           name="description">
-                                                                    @error("description")
-                                                                    <span class="text-danger">  {{$message}} </span>
-                                                                    @enderror
-
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-6 col-sm-12">
-                                                                <div class="form-group">
-                                                                    <label for="projectinput1"> {{trans('msg.short_description')}} </label>
-                                                                    <input type="text" value="{{old('short_description')}}" id="description"
-                                                                           class="form-control"
-                                                                           placeholder="  "
-                                                                           name="description">
-                                                                    @error("short_description")
-                                                                    <span class="text-danger">  {{$message}} </span>
-                                                                    @enderror
-
-                                                                </div>
-                                                            </div>
-
-
-
-
-
-                                                                <div class="col-md-4 col-sm-12" >
-                                                                    <div class="form-group">
-                                                                        <label for="projectinput1"> {{trans('msg.chooseDepart')}}  </label>
-                                                                       <select name="categories[]" class="select2 form-control" multiple>
-                                                                        <optgroup label="{{trans('msg.pleasechoosedepart')}}">
-                                                                            @if($data['categories'] && $data['categories'] ->count()>0)
-                                                                                @foreach ($data['categories'] as $category)
-                                                                                    <option value={{$category->id}}>{{$category->name}}</option>
-                                                                                @endforeach
-                                                                                @endif
-                                                                        </optgroup>
-                                                                       </select>
-                                                                               @error("categories")
-                                                                               <span class="text-danger">  {{$message}} </span>
-                                                                               @enderror
-
-                                                                    </div>
-                                                                </div>
-
-
-                                                            <div class="col-md-4 col-sm-12" >
-                                                                <div class="form-group">
-                                                                    <label for="projectinput1"> {{trans('msg.choosetag')}}  </label>
-                                                                    <select name="tags[]" class="select2 form-control"  multiple>
-                                                                        <optgroup label="{{trans('msg.pleasechoosetag')}}">
-                                                                            @if($data['tags'] && $data['tags'] ->count()>0)
-                                                                                @foreach ($data['tags'] as $tags)
-                                                                                    <option value={{$tags->id}}>{{$tags->name}}</option>
-                                                                                @endforeach
-                                                                            @endif
-                                                                        </optgroup>
-                                                                    </select>
-                                                                    @error("tags")
-                                                                    <span class="text-danger">  {{$message}} </span>
-                                                                    @enderror
-
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-4" >
-                                                                <div class="form-group">
-                                                                    <label for="projectinput1"> {{trans('msg.choosebrand')}}  </label>
-                                                                    <select name="brand_id" class="select2 form-control" >
-                                                                        <optgroup label="{{trans('msg.pleasechoosebrand')}}">
-                                                                            @if($data['brands'] && $data['brands'] ->count()>0)
-                                                                                @foreach ($data['brands'] as $brand)
-                                                                                    <option value={{$brand->id}}>{{$brand->name}}</option>
-                                                                                @endforeach
-                                                                            @endif
-                                                                        </optgroup>
-                                                                    </select>
-                                                                    @error("brand_id")
-                                                                    <span class="text-danger">  {{$message}} </span>
-                                                                    @enderror
-
-                                                                </div>
-                                                            </div>
-
-
-                                                                <div class="col-md-6">
-                                                                    <div class="form-group mt-1">
-                                                                        <input type="checkbox" value=""
-                                                                               name="is_active"
-                                                                               id="is_active"
-                                                                               class="switchery" data-color="success" checked
-                                                                               />
-                                                                        <label for="is_active"
-                                                                               class="card-title ml-1">{{trans('msg.status')}} </label>
-
-                                                                        @error("is_active")
-                                                                        <span class="text-danger"> {{$messages}}</span>
-                                                                        @enderror
-                                                                    </div>
-                                                                </div>
-
-
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label for="name"> {{trans('msg.productname')}}  </label>
+                                                            <input type="text" value="{{old('name')}}" id="name"
+                                                                   class="form-control"
+                                                                   placeholder="  "
+                                                                   name="name">
+                                                            @error("name")
+                                                            <span class="text-danger">  {{$message}} </span>
+                                                            @enderror
 
                                                         </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label for="slug"> {{trans('msg.slugname')}} </label>
+                                                            <input type="text" value="{{old('slug')}}" id="slug"
+                                                                   class="form-control"
+                                                                   placeholder="  "
+                                                                   name="slug">
+                                                            @error("slug")
+                                                            <span class="text-danger">  {{$message}} </span>
+                                                            @enderror
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label for="description"> {{trans('msg.description')}} </label>
+                                                            <input type="text" value="{{old('description')}}" id="description"
+                                                                   class="form-control"
+                                                                   placeholder="  "
+                                                                   name="description">
+                                                            @error("description")
+                                                            <span class="text-danger">  {{$message}} </span>
+                                                            @enderror
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label for="short_description"> {{trans('msg.short_description')}} </label>
+                                                            <input type="text" value="{{old('short_description')}}" id="short_description"
+                                                                   class="form-control"
+                                                                   placeholder="  "
+                                                                   name="short_description">
+                                                            @error("short_description")
+                                                            <span class="text-danger">  {{$message}} </span>
+                                                            @enderror
+
+                                                        </div>
+                                                    </div>
+
+
+
+
+
+                                                    <div class="col-md-4 col-sm-12" >
+                                                        <div class="form-group">
+                                                            <label for="choosedepart"> {{trans('msg.chooseDepart')}}  </label>
+                                                            <select name="categories[]" class="select2 form-control" multiple>
+                                                                <optgroup label="{{trans('msg.pleasechoosedepart')}}">
+                                                                    @if($data['categories'] && $data['categories'] ->count()>0)
+                                                                        @foreach ($data['categories'] as $category)
+                                                                            <option value={{$category->id}}>{{$category->name}}</option>
+                                                                        @endforeach
+                                                                    @endif
+                                                                </optgroup>
+                                                            </select>
+                                                            @error("categories")
+                                                            <span class="text-danger">  {{$message}} </span>
+                                                            @enderror
+
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="col-md-4 col-sm-12" >
+                                                        <div class="form-group">
+                                                            <label for="choosetags"> {{trans('msg.choosetag')}}  </label>
+                                                            <select name="tags[]" class="select2 form-control"  multiple>
+                                                                <optgroup label="{{trans('msg.pleasechoosetag')}}">
+                                                                    @if($data['tags'] && $data['tags'] ->count()>0)
+                                                                        @foreach ($data['tags'] as $tags)
+                                                                            <option value={{$tags->id}}>{{$tags->name}}</option>
+                                                                        @endforeach
+                                                                    @endif
+                                                                </optgroup>
+                                                            </select>
+                                                            @error("tags")
+                                                            <span class="text-danger">  {{$message}} </span>
+                                                            @enderror
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4" >
+                                                        <div class="form-group">
+                                                            <label for="choosebrand "> {{trans('msg.choosebrand')}}  </label>
+                                                            <select name="brand_id" class="select2 form-control" >
+                                                                <optgroup label="{{trans('msg.pleasechoosebrand')}}">
+                                                                    @if($data['brands'] && $data['brands'] ->count()>0)
+                                                                        @foreach ($data['brands'] as $brand)
+                                                                            <option value={{$brand->id}}>{{$brand->name}}</option>
+                                                                        @endforeach
+                                                                    @endif
+                                                                </optgroup>
+                                                            </select>
+                                                            @error("brand_id")
+                                                            <span class="text-danger">  {{$message}} </span>
+                                                            @enderror
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6">
+                                                        <div class="form-group mt-1">
+                                                            <input type="checkbox" value=""
+                                                                   name="is_active"
+                                                                   id="is_active"
+                                                                   class="switchery" data-color="success" checked
+                                                            />
+                                                            <label for="is_active"
+                                                                   class="card-title ml-1">{{trans('msg.status')}} </label>
+
+                                                            @error("is_active")
+                                                            <span class="text-danger"> {{$message}}</span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
                                             </div>
+
 
 
                                             <div class="form-actions">

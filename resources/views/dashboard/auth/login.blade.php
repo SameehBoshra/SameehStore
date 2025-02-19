@@ -11,12 +11,12 @@ Admin Login
                     <div class="card-header border-0">
                         <div class="card-title text-center">
                             <div class="p-1">
-                                <img src="{{asset('assets/front/images/logo.png')}}" alt="LOGO"/>
+                                <img src="{{asset('assets/images/sameeh.png')}}" height="50" width="50"  alt=""/>
 
                             </div>
                         </div>
                         <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2">
-                            <span>الدخول للوحة التحكم </span>
+                            <span>  {{trans('msg.dashboardenter')}} </span>
                         </h6>
                     </div>
                     @include('dashboard.includes.alerts.errors')
@@ -28,7 +28,7 @@ Admin Login
                                 @csrf
                                 <fieldset class="form-group position-relative has-icon-left mb-0">
                                     <input type="text" name="email" class="form-control form-control-lg input-lg"
-                                           value="{{old('email')}}" id="email" placeholder="أدخل البريد الالكتروني ">
+                                           value="{{old('email')}}" id="email" placeholder=" {{trans('msg.enteremail')}}">
                                     <div class="form-control-position">
                                         <i class="ft-user"></i>
                                     </div>
@@ -40,7 +40,7 @@ Admin Login
                                 <fieldset class="form-group position-relative has-icon-left">
                                     <input type="password" name="password" class="form-control form-control-lg input-lg"
                                            id="user-password"
-                                           placeholder="أدخل كلمة المرور">
+                                           placeholder="  {{trans('msg.enterpassword')}}">
                                     <div class="form-control-position">
                                         <i class="la la-key"></i>
                                     </div>
@@ -53,12 +53,12 @@ Admin Login
                                         <fieldset>
                                             <input type="checkbox" name="remember_me" id="remember-me"
                                                    class="chk-remember">
-                                            <label for="remember-me">تذكر دخولي</label>
+                                            <label for="remember-me"> {{trans('msg.rememberme')}}</label>
                                         </fieldset>
                                     </div>
                                 </div>
                                 <button type="submit" class="btn btn-info btn-lg btn-block"><i class="ft-unlock"></i>
-                                    دخول
+                                    {{trans('msg.login')}}
                                 </button>
                             </form>
                         </div>

@@ -14,16 +14,16 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('slug')->unique();
-            $table->decimal('price',20,5)->unsigned();
-            $table->decimal('special_price',20,5)->unsigned()->nullable();
+            $table->decimal('price',20,1)->nullable();
+            $table->decimal('special_price',20,1)->nullable();
             $table->string('special_price_type')->nullable();
             $table->date('special_price_start')->nullable();
-            $table->date('special_price_send')->nullable();
+            $table->date('special_price_end')->nullable();
             $table->decimal('selling_price',20,5)->unsigned()->nullable();
-            $table->string('sku');
-            $table->boolean('manage_stock');
-            $table->integer('dty');
-            $table->boolean('in_stock');
+            $table->string('sku')->nullable();
+            $table->boolean('manage_stock')->nullable();
+            $table->integer('dty')->nullable();
+            $table->boolean('in_stock')->default(0);
             $table->integer('viewed')->unsigned()->default(0);
             $table->boolean('is_active');
             $table->bigInteger('brand_id')->unsigned()->nullable();

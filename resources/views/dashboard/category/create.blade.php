@@ -116,7 +116,7 @@
                                                                 </div>
 
 
-                                                                <div class="col-md-6">
+                                                            <div class="col-md-6">
                                                                     <div class="form-group mt-1">
                                                                         <input type="checkbox" value=""
                                                                                name="is_active"

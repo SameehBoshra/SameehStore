@@ -38,11 +38,18 @@ class Product extends Model
     }
     public function categories()
     {
-        return $this->belongsToMany(ProductCategory::class ,'product_categories');
+        return $this->belongsToMany(Category::class ,'product_categories');
     }
-    public function tag()
+    public function tags()
     {
-        return $this->belongsToMany(ProductTag::class ,'product_tags');
+        return $this->belongsToMany(Tag::class ,'product_tags');
     }
-
+    public function getActive()
+    {
+        return $this->is_active  ? trans('msg.yesactive'): trans('msg.notactive');
+    }
+    public function getIsActiveAttribute($value)
+    {
+        return $value == 1 ? 'true' : 'false';  // Ensure it correctly returns 1 or 0
+    }
 }

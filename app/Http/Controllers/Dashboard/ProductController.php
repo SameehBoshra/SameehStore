@@ -7,9 +7,11 @@ use App\Http\Requests\GeneralProductRequest;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\ImageProduct;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use DB;
 
 class ProductController extends Controller
 {
@@ -18,13 +20,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-
-
+        $products = Product::orderBy('id','desc')->select('id','slug','price','is_active')->paginate(Pagination_count);
+      //  dd($products->all());
+        return view('dashboard.products.general.index' , compact('products'));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         $data=[];
@@ -34,11 +33,11 @@ class ProductController extends Controller
         return view('dashboard.products.general.create' , compact('data'));
     }
 
-
 public function store(Request $request)
 {
+
+
     //dd('request');
-  //  return $request;
 
    //try {
         // Validate input
@@ -53,39 +52,143 @@ public function store(Request $request)
             'brand_id'=>'required|numeric|exists:brands,id',
             'tags'=>'nullable|array|min:1',
             'tags.*'=>'numeric|exists:tags,id',
-
         ]);
-
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         }
-
-       // return $request;
-
-
        // Automatically set 'is_active' based on input (default to 0)
-        $request->merge(['is_active' => $request->has('is_active') ? 1 : 0]);
+    $request->merge(['is_active' => $request->has('is_active') ? 1 : 0]);
+        // Create product
+   // dd( $request->all());
+       $product=  Product::create($request->only(['is_active','slug','brand_id','name' ,'description','short_description']));
+      // save product categories
+      $product->categories()->attach($request->input('categories'));
+    // save product tags
+    $product->tags()->attach($request->input('tags'));
+    $product->save();
+    DB::commit();
 
-
-
-        // Create category
-
-      $product=  Product::create($request->except(['_token']));
-
-
-
-
-        return redirect()->back()->with(['success' => trans('msg.ٍbrandCategoryaddsuccess')]);
+        return redirect()->route('dashboard.product.index')->with(['success' => trans('msg.messageadd')]);
    // } catch (\Exception $ex) {
-        return redirect()->back()->with(['error' => trans('msg.Somethingwrong')]);
+    DB::rollBack();
+        return redirect()->route('dashboard.product.index')->with(['error' => trans('msg.Somethingwrong')]);
  //  }
 
 
 }
 
+// price
+public function priceCreate($product_id)
+{
+    $products=Product::where('id',$product_id)->get();
+
+    return view('dashboard.products.price.create' ,compact('products'))->with('id', $product_id);
+}
+public function storePrice(Request $request)
+{
+//    try {
+        // Validate input
+        $validator = Validator::make($request->all(), [
+
+            'price' => 'required|numeric|min:0',
+            'product_id'=>'required|exists:products,id',
+            'special_price' => 'nullable|numeric',
+            'special_price_start' => 'nullable|required_with:special_price|date',
+            'special_price_end' => 'nullable|required_with:special_price|date',
+            'special_price_type' => 'nullable|required_with:special_price|in:Fixed,Precent',
+
+        ]);
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+        // update product
+        DB::beginTransaction();
+        $product=  Product::whereId($request->product_id) ->update($request->only(['price','special_price','special_price_type' ,'special_price_start' ,'special_price_end']));
+        DB::commit();
+
+        return redirect()->route('dashboard.product.index')->with(['success' => trans('msg.messageadd')]);
+  //  } catch (\Exception $ex) {
+        DB::rollBack();
+        return redirect()->route('dashboard.product.index')->with(['error' => trans('msg.Somethingwrong')]);
+ //   }
+}
+
+
+// stock
+
+
+    public function stockCreate($product_id)
+    {
+        $products=Product::where('id',$product_id)->get();
+        return view('dashboard.products.stock.create' ,compact('products'))->with('id', $product_id);
+    }
+    public function stockStore(Request $request)
+    {
+    try {
+        // Validate input
+        $validator = Validator::make($request->all(), [
+            'sku' => 'required|min:5|max:20',
+            'product_id' => 'required|exists:products,id',
+            'in_stock' => 'required|in:0,1',
+            'manage_stock' => 'required|in:0,1',
+            'dty' => 'required_with:manage_stock|integer|min:1',
+        ],
+        [
+            'dty.required_with' => trans('msg.dtyrequiredwith'),
+        ]);
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+        // update product
+        DB::beginTransaction();
+        $product=  Product::whereId($request->product_id) ->update($request->only(['sku','in_stock','manage_stock' ,'dty']));
+        DB::commit();
+
+        return redirect()->route('dashboard.product.index')->with(['success' => trans('msg.messageadd')]);
+         } catch (\Exception $ex) {
+        DB::rollBack();
+        return redirect()->route('dashboard.product.index')->with(['error' => trans('msg.Somethingwrong')]);
+           }
+    }
     /**
      * Display the specified resource.
      */
+
+    // photo
+    public function photoCreate($product_id)
+    {
+        $images = ImageProduct::where('product_id', $product_id)->get();
+
+        return view('dashboard.products.photo.create' ,compact('images'))->with('id', $product_id);
+    }
+    public function photoStore(Request $request)
+    {
+      //  dd($request->all());
+       //try {
+            // Validate input
+            $validator = Validator::make($request->all(), [
+                'product_id' => 'required|exists:products,id',
+                'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Validate file
+
+            ]);
+            if ($validator->fails()) {
+                return redirect()->back()->withErrors($validator)->withInput();
+            }
+            // update product
+            DB::beginTransaction();
+            ImageProduct::create($request->only(['product_id','image']));
+
+
+            DB::commit();
+
+            return redirect()->route('dashboard.product.index')->with(['success' => trans('msg.messageadd')]);
+      //  } catch (\Exception $ex) {
+            DB::rollBack();
+            return redirect()->route('dashboard.product.index')->with(['error' => trans('msg.Somethingwrong')]);
+      //  }
+    }
+
+
     public function show(string $id)
     {
         //

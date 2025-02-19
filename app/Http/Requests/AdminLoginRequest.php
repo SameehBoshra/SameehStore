@@ -23,16 +23,14 @@ class AdminLoginRequest extends FormRequest
     {
         return [
             'email' => 'required|email|exists:admins,email',
-            'password' => 'required|min:6',
+            'password' => 'required|min:6|max:100',
         ];
     }
 
     public function messages(): array
     {
         return [
-            'email.required' => "الايميل الالكتروني مطلوب",
-            'email.email' => "صيغة الايميل الالكتروني غير صحيحه",
-            'password.required' => "الباسورد مطلوب",
+
         ];
     }
 

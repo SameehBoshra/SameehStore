@@ -117,7 +117,7 @@
             </span>
                 </a>
                 <ul class="menu-content">
-                    <li class="active"><a class="menu-item" href="{{route('dashboard.tags.index')}}"
+                    <li class="active"><a class="menu-item" href="{{route('dashboard.product.index')}}"
                                           data-i18n="nav.dash.ecommerce"> {{trans('msg.showall')}}  </a>
                     </li>
                     <li><a class="menu-item" href="{{route('dashboard.product.general.create')}}" data-i18n="nav.dash.crypto">

@@ -131,12 +131,24 @@ Route::group(['prefix'=>'brands'] , function()
     ########################  Products################
     Route::group( ['prefix' => 'products'] ,function()
     {
+        // general
         Route::get('/', [ProductController::class ,'index'])->name('dashboard.product.index');
-        Route::get('general', [ProductController::class ,'create'])->name('dashboard.product.general.create');
         Route::post('store_general', [ProductController::class ,'store'])->name('dashboard.product.store_general.store');
+         // price
+        Route::get('price/{id}', [ProductController::class ,'priceCreate'])->name('dashboard.product.price.create');
+        Route::post('price/{id}', [ProductController::class ,'storePrice'])->name('dashboard.product.price.store');
+         // stock
+        Route::get('stock/{id}', [ProductController::class ,'stockCreate'])->name('dashboard.product.stock.create');
+        Route::post('stock/{id}', [ProductController::class ,'stockStore'])->name('dashboard.product.stock.store');
+        // photo
+        Route::get('photo/{id}', [ProductController::class ,'photoCreate'])->name('dashboard.product.photo.create');
+        Route::post('photo/{id}', [ProductController::class , 'photoStore'])->name('dashboard.product.photo.store');
+
         Route::get('edit/{id}', [ProductController::class ,'edit'])->name('dashboard.product.edit');
         Route::post('update/{id}', [ProductController::class ,'update'])->name('dashboard.product.update');
         Route::get('destroy/{id}', [ProductController::class ,'destroy'])->name('dashboard.product.destroy');
+        Route::get('general', [ProductController::class ,'create'])->name('dashboard.product.general.create');
+
     });
 ######################## end products################
 
