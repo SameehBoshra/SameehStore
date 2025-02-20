@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AttributeTranslation extends Model
+class OptionTranslation extends Model
 {
     use HasFactory;
-    protected $guarded=[];
+    protected $table='option_translations';
+    protected $guarded =[];
     public $timestamps=false;
-
 }

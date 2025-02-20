@@ -13,7 +13,7 @@ class Product extends Model
 {
     use HasFactory;
     use Translatable, SoftDeletes;
-    protected $guarded = [];
+    protected $fillable = ['id','product_id', 'attribute_id','created_at','updated_at'];
     public $timestamps = true;
 
     protected $translatedAttributes = ['name','description','short_description'];
@@ -51,5 +51,15 @@ class Product extends Model
     public function getIsActiveAttribute($value)
     {
         return $value == 1 ? 'true' : 'false';  // Ensure it correctly returns 1 or 0
+    }
+
+    public function options()
+    {
+        return $this->hasMany(Option::class,'product_id');
+    }
+
+    public function scopeActive($q)
+    {
+        return $q->where('is_active',1);
     }
 }

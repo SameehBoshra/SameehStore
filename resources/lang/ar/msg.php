@@ -162,13 +162,38 @@ return [
 'instock'=>'موجودة في المستودع',
 'notinstock'=>'غير موجودة في المستودع',
 'chooseplease'=>'من فضلك أختار ',
-    'dtyrequiredwith'=>'الكمية مطلوب في حالة أتاحة التتبع للمنتج',
+'dtyrequiredwith'=>'الكمية مطلوب في حالة أتاحة التتبع للمنتج',
+'special_price_start.required'=>'بداية وقت العرض  مطلوبة في حالة وجود سعر خاص ',
+'special_price_end.required'=>'نهاية وقت العرض  مطلوبة في حالة وجود سعر خاص ',
+'special_price.required'=>'نوع السعرمطلوب في حالة وجود سعر خاص ',
 
-    ''=>'',
-''=>'',
-''=>'',
-''=>'',
-''=>'',
+
+//Attribute
+'attributepage'=>'صفات المنتاجات',
+'attributepart'=>'صفات النتاجات  ',
+'allattributepart'=>' عرض كل صفات المنتاجات',
+'addattributepart'=>'أضافة صفة جديدة لمنتج',
+'attributename'=>' أسم الصفة ',
+'dataofattributepart'=>'بيانات صفات المنتج ',
+'editattributepart'=>'تعديل صفات المنتج  ',
+
+
+
+//option
+'optionpage'=>'خصائص صفات المنتاجات',
+'optionpart'=>'خصائص صفات المنتاجات  ',
+'alloptionpart'=>'جميع خصائص صفات المنتاجات ',
+'addoptionpart'=>'أضافة خصية جديده لصفات المنتج',
+'optionname'=>'أسم الخصية ',
+'dataofoptionpart'=>'بيانات خصائص صفات المنتج ',
+'editoptionpart'=>'تعديد خصائص صفات المنتج',
+'optionnotfound'=>'عذرا لا توجد هذه الخصية ',
+'chooseproduct'=>'من فضلك أختار المنتج  ',
+'chooseattribute'=>'من فضلك أختار الصفة  ',
+
+
+
+
 
 
 

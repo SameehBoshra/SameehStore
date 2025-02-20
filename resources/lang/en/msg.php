@@ -152,7 +152,10 @@ return [
     'special_price_end'=>'special_price_end',
     'special_price_start'=>'special_price_start',
     'dataofproductprice'=>'Data Of Product Price',
-
+'special_price_start.required'=>'The special price start field is required when special price is present.',
+'special_price_end.required'=>'The special price end field is required when special price is present.',
+'special_price.required'=>'The special price type field is required when special price is present',
+    // stock
     'addproductstockpart'=>'Data OF Product Stock',
     'skuproduct'=>'SKU',
     'manage_stock'=>'Management Stock',
@@ -167,6 +170,28 @@ return [
     'uploadPhoto'=>'Uploaded Image',
 
 
+//Attribute
+'attributepage'=>'Product Attributes',
+'attributepart'=>'Product Attributes  ',
+'allattributepart'=>'All Product Attribute',
+'addattributepart'=>'Add new Product Attribute',
+'attributename'=>'Attribute Name',
+'dataofattributepart'=>'Data Of Product Attributes',
+'editattributepart'=>'Edit Product Attribute ',
+'attributenotfound'=>'Attribute Not Found',
+
+
+//option
+'optionpage'=>'Product Attribute Options',
+'optionpart'=>'Product AttributeOptions  ',
+'alloptionpart'=>'All Product Attribute Options',
+'addoptionpart'=>'Add new Product Attribute Options',
+'optionname'=>'Option Name',
+'dataofoptionpart'=>'Data Of Product Attribute Options',
+'editoptionpart'=>'Edit Product Attribute Options ',
+'optionnotfound'=>'Options Not Found',
+'chooseproduct'=>'Please Choose Product ',
+'chooseattribute'=>'Please Choose Attribute ',
 
 
 

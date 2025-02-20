@@ -113,7 +113,7 @@
             <li class="nav-item"><a href=""><i class="la la-group"></i>
                     <span class="menu-title" data-i18n="nav.dash.main"> {{trans('msg.productpage')}}   </span>
                     <span
-                        class="badge badge badge-danger badge-pill float-right mr-2"> {{ App\Models\Tag::count() }}
+                        class="badge badge badge-danger badge-pill float-right mr-2"> {{ App\Models\Product::count() }}
             </span>
                 </a>
                 <ul class="menu-content">
@@ -125,6 +125,42 @@
                     </li>
                 </ul>
             </li>
+
+                  {{--  product attributes  --}}
+                  <li class="nav-item"><a href=""><i class="la la-group"></i>
+                    <span class="menu-title" data-i18n="nav.dash.main"> {{trans('msg.attributepage')}}   </span>
+                    <span
+                        class="badge badge badge-danger badge-pill float-right mr-2"> {{ App\Models\Attribute::count() }}
+            </span>
+                </a>
+                <ul class="menu-content">
+                    <li class="active"><a class="menu-item" href="{{route('dashboard.attribute.index')}}"
+                                          data-i18n="nav.dash.ecommerce"> {{trans('msg.showall')}}  </a>
+                    </li>
+                    <li><a class="menu-item" href="{{route('dashboard.attribute.create')}}" data-i18n="nav.dash.crypto">
+                            {{trans('msg.addattributepart')}}                        </a>
+                    </li>
+                </ul>
+            </li>
+
+                              {{--  product attributes  options --}}
+                              <li class="nav-item"><a href=""><i class="la la-group"></i>
+                                <span class="menu-title" data-i18n="nav.dash.main"> {{trans('msg.optionpage')}}   </span>
+                                <span
+                                    class="badge badge badge-danger badge-pill float-right mr-2"> {{ App\Models\Option::count() }}
+                        </span>
+                            </a>
+                            <ul class="menu-content">
+                                <li class="active"><a class="menu-item" href="{{route('dashboard.option.index')}}"
+                                                      data-i18n="nav.dash.ecommerce"> {{trans('msg.showall')}}  </a>
+                                </li>
+                                <li><a class="menu-item" href="{{route('dashboard.option.create')}}" data-i18n="nav.dash.crypto">
+                                        {{trans('msg.addoptionpart')}}                        </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
 
 
 

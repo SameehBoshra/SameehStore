@@ -9,6 +9,8 @@ use App\Http\Controllers\Dashboard\ProfileController;
 use App\Http\Controllers\Dashboard\ShippingMethodController;
 use App\Http\Controllers\Dashboard\TagController;
 use App\Http\Controllers\Dashboard\ProductController;
+use App\Http\Controllers\Dashboard\AttributeController;
+use App\Http\Controllers\Dashboard\OptionController;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Illuminate\Support\Facades\Auth;
@@ -152,8 +154,29 @@ Route::group(['prefix'=>'brands'] , function()
     });
 ######################## end products################
 
+########################  attributes ################
+Route::group( ['prefix' => 'attributes'] ,function()
+{
+    Route::get('/', [AttributeController::class ,'index'])->name('dashboard.attribute.index');
+    Route::get('create', [AttributeController::class ,'create'])->name('dashboard.attribute.create');
+    Route::post('store', [AttributeController::class ,'store'])->name('dashboard.attribute.store');
+    Route::get('edit/{id}', [AttributeController::class ,'edit'])->name('dashboard.attribute.edit');
+    Route::post('update/{id}', [AttributeController::class ,'update'])->name('dashboard.attribute.update');
+    Route::get('destroy/{id}', [AttributeController::class ,'destroy'])->name('dashboard.attribute.destroy');
+});
+######################## end attributes################
 
-
+########################  options ################
+Route::group( ['prefix' => 'options'] ,function()
+{
+    Route::get('/', [OptionController::class ,'index'])->name('dashboard.option.index');
+    Route::get('create', [OptionController::class ,'create'])->name('dashboard.option.create');
+    Route::post('store', [OptionController::class ,'store'])->name('dashboard.option.store');
+    Route::get('edit/{id}', [OptionController::class ,'edit'])->name('dashboard.option.edit');
+    Route::post('update/{id}', [OptionController::class ,'update'])->name('dashboard.option.update');
+    Route::get('destroy/{id}', [OptionController::class ,'destroy'])->name('dashboard.option.destroy');
+});
+######################## end options################
 
 
 

@@ -39,7 +39,7 @@ public function store(Request $request)
 
     //dd('request');
 
-   //try {
+   try {
         // Validate input
         $validator = Validator::make($request->all(), [
 
@@ -66,13 +66,13 @@ public function store(Request $request)
     // save product tags
     $product->tags()->attach($request->input('tags'));
     $product->save();
-    DB::commit();
+   // DB::commit();
 
         return redirect()->route('dashboard.product.index')->with(['success' => trans('msg.messageadd')]);
-   // } catch (\Exception $ex) {
-    DB::rollBack();
+   } catch (\Exception $ex) {
+   // DB::rollBack();
         return redirect()->route('dashboard.product.index')->with(['error' => trans('msg.Somethingwrong')]);
- //  }
+  }
 
 
 }
@@ -97,18 +97,26 @@ public function storePrice(Request $request)
             'special_price_end' => 'nullable|required_with:special_price|date',
             'special_price_type' => 'nullable|required_with:special_price|in:Fixed,Precent',
 
-        ]);
+        ],
+
+    [
+        'special_price_start.required_with'=>trans('msg.special_price_start.required'),
+        'special_price_end.required_with'=>trans('msg.special_price_end.required'),
+        'special_price_type.required_with'=>trans('msg.special_price.required'),
+
+    ]
+);
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         }
         // update product
-        DB::beginTransaction();
+   //     DB::beginTransaction();
         $product=  Product::whereId($request->product_id) ->update($request->only(['price','special_price','special_price_type' ,'special_price_start' ,'special_price_end']));
-        DB::commit();
+    //    DB::commit();
 
         return redirect()->route('dashboard.product.index')->with(['success' => trans('msg.messageadd')]);
   //  } catch (\Exception $ex) {
-        DB::rollBack();
+    //    DB::rollBack();
         return redirect()->route('dashboard.product.index')->with(['error' => trans('msg.Somethingwrong')]);
  //   }
 }
@@ -140,13 +148,13 @@ public function storePrice(Request $request)
             return redirect()->back()->withErrors($validator)->withInput();
         }
         // update product
-        DB::beginTransaction();
+      //  DB::beginTransaction();
         $product=  Product::whereId($request->product_id) ->update($request->only(['sku','in_stock','manage_stock' ,'dty']));
-        DB::commit();
+      //  DB::commit();
 
         return redirect()->route('dashboard.product.index')->with(['success' => trans('msg.messageadd')]);
          } catch (\Exception $ex) {
-        DB::rollBack();
+    //    DB::rollBack();
         return redirect()->route('dashboard.product.index')->with(['error' => trans('msg.Somethingwrong')]);
            }
     }
@@ -175,15 +183,15 @@ public function storePrice(Request $request)
                 return redirect()->back()->withErrors($validator)->withInput();
             }
             // update product
-            DB::beginTransaction();
+         //   DB::beginTransaction();
             ImageProduct::create($request->only(['product_id','image']));
 
 
-            DB::commit();
+          //  DB::commit();
 
             return redirect()->route('dashboard.product.index')->with(['success' => trans('msg.messageadd')]);
       //  } catch (\Exception $ex) {
-            DB::rollBack();
+         //   DB::rollBack();
             return redirect()->route('dashboard.product.index')->with(['error' => trans('msg.Somethingwrong')]);
       //  }
     }
