@@ -15,7 +15,7 @@ class Authenticate extends Middleware
             //    $locale = app()->getLocale(); // Get current locale
 
                 if (app()->getLocale().('/admin*')) {
-                    return route('admin.login');
+                    return redirect()->route('admin.login');
                 } else {
                     return route('login');
                 }

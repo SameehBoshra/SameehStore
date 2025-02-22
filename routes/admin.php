@@ -192,13 +192,4 @@ Route::group(['namespace'=>'Dashboard'  ,'prefix'=>'admin'] , function ()
 
 
 
-
-
-        Route::get('/', function () {
-            return view('welcome');
-        });
-
-
-
-
     });

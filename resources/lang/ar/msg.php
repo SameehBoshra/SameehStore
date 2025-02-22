@@ -190,6 +190,7 @@ return [
 'optionnotfound'=>'عذرا لا توجد هذه الخصية ',
 'chooseproduct'=>'من فضلك أختار المنتج  ',
 'chooseattribute'=>'من فضلك أختار الصفة  ',
+'AddOption'=>'أضافة خصائص',
 
 
 
