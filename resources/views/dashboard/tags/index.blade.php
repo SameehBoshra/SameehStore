@@ -11,6 +11,8 @@
                 <div class="row breadcrumbs-top">
                     <div class="breadcrumb-wrapper col-12">
                         <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">{{trans('msg.mainpage')}} </a>
+                            </li>
                             <li class="breadcrumb-item"><a href="{{ route('dashboard.tags.index') }}">{{trans('msg.tagpart')}}</a></li>
                         </ol>
                     </div>

@@ -3,7 +3,7 @@
 .nivoSlider {
     width: 80%; /* عرض أقل من الشاشة */
     max-width: 700px; /* أقصى عرض */
-    margin: auto; /* توسيط العنصر */
+    margin: auto; /* توسيط العنصر */كى
     overflow: hidden; /* تجنب التمدد */
     height: 100;
 
@@ -35,7 +35,7 @@
                                 <div class="process-loading active">
                                     <div class="loader">
                                    {{--      @isset($sliders)
-                                        @if($sliders->isNotEmpty())
+                                         @if($sliders->isNotEmpty())
                                         <img src="{{ asset($sliders[0]->photo) }}" alt=""
                                         >
                                         @endif
@@ -82,11 +82,11 @@
                     <div class="nov-row spacing-30 mt-15 col-lg-12 col-xs-12">
                         <div class="nov-row-wrap row">
                             <div class="nov-image col-lg-4 col-md-4">
-                             {{--    <div class="block">
+                                 <div class="block">
                                     <div class="block_content">
                                         <div class="effect">
                                             <a href="#"> <img class="img-fluid"
-                                                              src="{{asset('assets/images/laptop.jpeg')}}"
+                                                              src="{{asset('assets/images/1.jpg')}}"
                                                               alt="banner3-1" title="banner3-1"></a>
 
 
@@ -99,7 +99,7 @@
                                     <div class="block_content">
                                         <div class="effect">
                                             <a href="#"> <img class="img-fluid"
-                                                              src="{{asset('assets/images/laptop.jpeg')}}"
+                                                              src="{{asset('assets/images/2.jpg')}}"
                                                               alt="banner3-1" title="banner3-1"></a>
 
 
@@ -115,7 +115,7 @@
 
 
                                                  <img class="img-fluid"
-                                                              src="{{asset('assets/images/laptop.jpeg')}}"
+                                                              src="{{asset('assets/images/3.jpg')}}"
                                                               alt="banner3-1" title="banner3-1">
 
                                                             </a>
@@ -124,7 +124,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div> --}}
+                            </div>
                         </div>
                     </div>
                     <div class="nov-row  col-lg-12 col-xs-12">
@@ -149,12 +149,12 @@
                                                         <a href="home-appliance/12-232-nam-volutpat-justo-a-vehicula.html#/1-size-s/11-color-black"
                                                            class="thumbnail product-thumbnail two-image">
                                                             <img class="img-fluid image-cover"
-                                                                 src="img/nam-volutpat-justo-a-vehicula.jpg"
+                                                                 src="{{asset('assets/front/img/nam-volutpat-justo-a-vehicula.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/79-large_default/nam-volutpat-justo-a-vehicula.jpg"
                                                                  width="600" height="600">
                                                             <img class="img-fluid image-secondary"
-                                                                 src="img/nam-volutpat-justo-a-vehicula.jpg"
+                                                                 src="{{asset('assets/front/img/nam-volutpat-justo-a-vehicula.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/80-large_default/nam-volutpat-justo-a-vehicula.jpg"
                                                                  width="600" height="600">
@@ -248,12 +248,12 @@
                                                         <a href="audio/15-303-nunc-tempus-velit-quis-urnanb.html#/1-size-s/10-color-red"
                                                            class="thumbnail product-thumbnail two-image">
                                                             <img class="img-fluid image-cover"
-                                                                 src="img/nunc-tempus-velit-quis-urnanb.jpg"
+                                                                 src="{{asset('assets/front/img/nunc-tempus-velit-quis-urnanb.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/94-large_default/nunc-tempus-velit-quis-urnanb.jpg"
                                                                  width="600" height="600">
                                                             <img class="img-fluid image-secondary"
-                                                                 src="img/nunc-tempus-velit-quis-urnanb.jpg"
+                                                                 src="{{asset('assets/front/img/nunc-tempus-velit-quis-urnanb.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/95-large_default/nunc-tempus-velit-quis-urnanb.jpg"
                                                                  width="600" height="600">
@@ -347,12 +347,12 @@
                                                         <a href="home-appliance/16-323-cras-consequat-quis-dolor-eunde.html#/1-size-s/11-color-black"
                                                            class="thumbnail product-thumbnail two-image">
                                                             <img class="img-fluid image-cover"
-                                                                 src="img/cras-consequat-quis-dolor-eunde.jpg"
+                                                                 src="{{asset('assets/front/img/cras-consequat-quis-dolor-eunde.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/99-large_default/cras-consequat-quis-dolor-eunde.jpg"
                                                                  width="600" height="600">
                                                             <img class="img-fluid image-secondary"
-                                                                 src="img/cras-consequat-quis-dolor-eunde.jpg"
+                                                                 src="{{asset('assets/front/img/cras-consequat-quis-dolor-eunde.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/100-large_default/cras-consequat-quis-dolor-eunde.jpg"
                                                                  width="600" height="600">
@@ -446,12 +446,12 @@
                                                         <a href="audio/21-391-nunc-eros-lacus-porta-sed-mattis.html#/1-size-s/13-color-orange"
                                                            class="thumbnail product-thumbnail two-image">
                                                             <img class="img-fluid image-cover"
-                                                                 src="img/nunc-eros-lacus-porta-sed-mattis.jpg"
+                                                                 src="{{asset('assets/front/img/nunc-eros-lacus-porta-sed-mattis.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/120-large_default/nunc-eros-lacus-porta-sed-mattis.jpg"
                                                                  width="600" height="600">
                                                             <img class="img-fluid image-secondary"
-                                                                 src="../121-home_default/nunc-eros-lacus-porta-sed-mattis.jpg"
+                                                                 src="{{asset('assets/front/img/nunc-eros-lacus-porta-sed-mattis.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/121-large_default/nunc-eros-lacus-porta-sed-mattis.jpg"
                                                                  width="600" height="600">
@@ -562,12 +562,12 @@
                                                             <a href="smartphone-tablet/1-40-hummingbird-printed-t-shirt.html#/1-size-s/6-color-taupe"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/hummingbird-printed-t-shirt.jpg"
+                                                                     src="{{asset('assets/front/img/hummingbird-printed-t-shirt.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/24-large_default/hummingbird-printed-t-shirt.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/hummingbird-printed-t-shirt.jpg"
+                                                                     src="{{asset('assets/front/img/hummingbird-printed-t-shirt.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/25-large_default/hummingbird-printed-t-shirt.jpg"
                                                                      width="600" height="600">
@@ -650,12 +650,12 @@
                                                             <a href="smartphone-tablet/2-60-brown-bear-printed-sweater.html#/1-size-s/11-color-black"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/brown-bear-printed-sweater.jpg"
+                                                                     src="{{asset('assets/front/img/brown-bear-printed-sweater.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/29-large_default/brown-bear-printed-sweater.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/brown-bear-printed-sweater.jpg"
+                                                                     src="{{asset('assets/front/img/brown-bear-printed-sweater.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/30-large_default/brown-bear-printed-sweater.jpg"
                                                                      width="600" height="600">
@@ -738,12 +738,12 @@
                                                             <a href="smartphone-tablet/3-95-the-best-is-yet-to-come-framed-poster.html#/1-size-s/13-color-orange"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/the-best-is-yet-to-come-framed-poster.jpg"
+                                                                     src="{{asset('assets/front/img/the-best-is-yet-to-come-framed-poster.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/34-large_default/the-best-is-yet-to-come-framed-poster.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/the-best-is-yet-to-come-framed-poster.jpg"
+                                                                     src="{{asset('assets/front/img/the-best-is-yet-to-come-framed-poster.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/35-large_default/the-best-is-yet-to-come-framed-poster.jpg"
                                                                      width="600" height="600">
@@ -828,12 +828,12 @@
                                                             <a href="home-appliance/4-112-the-adventure-begins-framed-poster.html#/1-size-s/9-color-off_white"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/the-adventure-begins-framed-poster.jpg"
+                                                                     src="{{asset('assets/front/img/the-adventure-begins-framed-poster.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/39-large_default/the-adventure-begins-framed-poster.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/the-adventure-begins-framed-poster.jpg"
+                                                                     src="{{asset('assets/front/img/the-adventure-begins-framed-poster.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/43-large_default/the-adventure-begins-framed-poster.jpg"
                                                                      width="600" height="600">
@@ -916,12 +916,12 @@
                                                             <a href="audio/5-134-today-is-a-good-day-framed-poster.html#/1-size-s/13-color-orange"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/today-is-a-good-day-framed-poster.jpg"
+                                                                     src="{{asset('assets/front/img/today-is-a-good-day-framed-poster.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/44-large_default/today-is-a-good-day-framed-poster.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/today-is-a-good-day-framed-poster.jpg"
+                                                                     src="{{asset('assets/front/img/today-is-a-good-day-framed-poster.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/45-large_default/today-is-a-good-day-framed-poster.jpg"
                                                                      width="600" height="600">
@@ -1004,12 +1004,12 @@
                                                             <a href="home-appliance/6-nullam-tempor-orci-eu-pretium.html"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/nullam-tempor-orci-eu-pretium.jpg"
+                                                                     src="{{asset('assets/front/img/nullam-tempor-orci-eu-pretium.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/49-large_default/nullam-tempor-orci-eu-pretium.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/nullam-tempor-orci-eu-pretium.jpg"
+                                                                     src="{{asset('assets/front/img/nullam-tempor-orci-eu-pretium.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/50-large_default/nullam-tempor-orci-eu-pretium.jpg"
                                                                      width="600" height="600">
@@ -1094,12 +1094,12 @@
                                                             <a href="home-appliance/7-155-donec-non-lectus-ac-erat-sedei.html#/1-size-s/10-color-red"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/donec-non-lectus-ac-erat-sedei.jpg"
+                                                                     src="{{asset('assets/front/img/donec-non-lectus-ac-erat-sedei.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/54-large_default/donec-non-lectus-ac-erat-sedei.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/donec-non-lectus-ac-erat-sedei.jpg"
+                                                                     src="{{asset('assets/front/img/donec-non-lectus-ac-erat-sedei.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/55-large_default/donec-non-lectus-ac-erat-sedei.jpg"
                                                                      width="600" height="600">
@@ -1182,12 +1182,12 @@
                                                             <a href="audio/8-172-curabitur-in-lorem-sit-ameten-alt.html#/1-size-s/10-color-red"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/curabitur-in-lorem-sit-ameten-alt.jpg"
+                                                                     src="{{asset('assets/front/img/curabitur-in-lorem-sit-ameten-alt.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/59-large_default/curabitur-in-lorem-sit-ameten-alt.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/curabitur-in-lorem-sit-ameten-alt.jpg"
+                                                                     src="{{asset('assets/front/img/curabitur-in-lorem-sit-ameten-alt.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/60-large_default/curabitur-in-lorem-sit-ameten-alt.jpg"
                                                                      width="600" height="600">
@@ -1270,12 +1270,12 @@
                                                             <a href="smartphone-tablet/9-179-mauris-feugiat-et-dui-sit-amet.html#/1-size-s/15-color-green"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/mauris-feugiat-et-dui-sit-amet.jpg"
+                                                                     src="{{asset('assets/front/img/mauris-feugiat-et-dui-sit-amet.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/64-large_default/mauris-feugiat-et-dui-sit-amet.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/mauris-feugiat-et-dui-sit-amet.jpg"
+                                                                     src="{{asset('assets/front/img/mauris-feugiat-et-dui-sit-amet.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/65-large_default/mauris-feugiat-et-dui-sit-amet.jpg"
                                                                      width="600" height="600">
@@ -1360,13 +1360,33 @@
                                                             <a href="smartphone-tablet/10-192-nullam-lacinia-metus-posuere.html#/1-size-s/18-color-pink"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/nullam-lacinia-metus-posuere.jpg"
-                                                                     alt=""
+                                                                     src="{{asset('assets/front/img/nullam-lacinia-metus-posuere.jpg')}}"
+{{--                                                                      src="img/nullam-lacinia-metus-posuere.jpg"
+ --}}                                                                     alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/69-large_default/nullam-lacinia-metus-posuere.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/nullam-lacinia-metus-posuere.jpg"
-                                                                     alt=""
+                                                                     src="{{asset('assets/front/img/nullam-lacinia-metus-posuere.jpg')}}"
+{{-- NEW ARRIVALS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ --}}                                                                     alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/70-large_default/nullam-lacinia-metus-posuere.jpg"
                                                                      width="600" height="600">
                                                             </a>
@@ -1448,12 +1468,12 @@
                                                             <a href="home-appliance/12-232-nam-volutpat-justo-a-vehicula.html#/1-size-s/11-color-black"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/nam-volutpat-justo-a-vehicula.jpg"
+                                                                     src="{{asset('assets/front/img/nam-volutpat-justo-a-vehicula.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/79-large_default/nam-volutpat-justo-a-vehicula.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/nam-volutpat-justo-a-vehicula.jpg"
+                                                                     src="{{asset('assets/front/img/nam-volutpat-justo-a-vehicula.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/80-large_default/nam-volutpat-justo-a-vehicula.jpg"
                                                                      width="600" height="600">
@@ -1539,12 +1559,12 @@
                                                             <a href="audio/13-254-proin-placerat-lacus-eget-auctor.html#/1-size-s/10-color-red"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/proin-placerat-lacus-eget-auctor.jpg"
+                                                                     src="{{asset('assets/front/img/proin-placerat-lacus-eget-auctor.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/84-large_default/proin-placerat-lacus-eget-auctor.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/proin-placerat-lacus-eget-auctor.jpg"
+                                                                     src="{{asset('assets/front/img/proin-placerat-lacus-eget-auctor.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/85-large_default/proin-placerat-lacus-eget-auctor.jpg"
                                                                      width="600" height="600">
@@ -1629,12 +1649,12 @@
                                                             <a href="smartphone-tablet/14-270-donec-laoreet-imperdiet-elit-ut.html#/1-size-s/6-color-taupe"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/donec-laoreet-imperdiet-elit-ut.jpg"
+                                                                     src="{{asset('assets/front/img/donec-laoreet-imperdiet-elit-ut.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/89-large_default/donec-laoreet-imperdiet-elit-ut.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/donec-laoreet-imperdiet-elit-ut.jpg"
+                                                                     src="{{asset('assets/front/img/donec-laoreet-imperdiet-elit-ut.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/90-large_default/donec-laoreet-imperdiet-elit-ut.jpg"
                                                                      width="600" height="600">
@@ -1808,12 +1828,12 @@
                                                             <a href="home-appliance/16-323-cras-consequat-quis-dolor-eunde.html#/1-size-s/11-color-black"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/cras-consequat-quis-dolor-eunde.jpg"
+                                                                     src="{{asset('assets/front/img/cras-consequat-quis-dolor-eunde.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/99-large_default/cras-consequat-quis-dolor-eunde.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/cras-consequat-quis-dolor-eunde.jpg"
+                                                                     src="{{asset('assets/front/img/cras-consequat-quis-dolor-eunde.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/100-large_default/cras-consequat-quis-dolor-eunde.jpg"
                                                                      width="600" height="600">
@@ -1901,12 +1921,12 @@
                                                             <a href="camera-photo/17-328-nam-feugiat-tellus-nec-ultrices.html#/1-size-s/10-color-red"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/nam-feugiat-tellus-nec-ultrices.jpg"
+                                                                     src="{{asset('assets/front/img/nam-feugiat-tellus-nec-ultrices.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/104-large_default/nam-feugiat-tellus-nec-ultrices.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/nam-feugiat-tellus-nec-ultrices.jpg"
+                                                                     src="{{asset('assets/front/img/nam-feugiat-tellus-nec-ultrices.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/105-large_default/nam-feugiat-tellus-nec-ultrices.jpg"
                                                                      width="600" height="600">
@@ -1989,12 +2009,12 @@
                                                             <a href="home-appliance/18-363-mauris-semper-mattis-gravida.html#/1-size-s/10-color-red"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/mauris-semper-mattis-gravida.jpg"
+                                                                     src="{{asset('assets/front/img/mauris-semper-mattis-gravida.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/109-large_default/mauris-semper-mattis-gravida.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/mauris-semper-mattis-gravida.jpg"
+                                                                     src="{{asset('assets/front/img/mauris-semper-mattis-gravida.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/110-large_default/mauris-semper-mattis-gravida.jpg"
                                                                      width="600" height="600">
@@ -2077,12 +2097,12 @@
                                                             <a href="home-appliance/19-383-vivamus-non-ante-quis-est-rhont.html#/1-size-s/10-color-red"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/vivamus-non-ante-quis-est-rhont.jpg"
+                                                                     src="{{asset('assets/front/img/vivamus-non-ante-quis-est-rhont.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/115-large_default/vivamus-non-ante-quis-est-rhont.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/vivamus-non-ante-quis-est-rhont.jpg"
+                                                                     src="{{asset('assets/front/img/vivamus-non-ante-quis-est-rhont.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/116-large_default/vivamus-non-ante-quis-est-rhont.jpg"
                                                                      width="600" height="600">
@@ -2170,7 +2190,7 @@
                                     <div class="block_content">
                                         <div class="effect">
                                             <a href="#"> <img class="img-fluid"
-                                                              src="modules/novpagemanage/img/7fdfbf16d6ffe0c99cd109bd3a886527.jpg"
+                                                              src="{{asset('assets/front/modules/novpagemanage/img/7fdfbf16d6ffe0c99cd109bd3a886527.jpg')}}"
                                                               alt="banner-4" title="banner-4"></a>
                                         </div>
                                     </div>
@@ -2181,7 +2201,7 @@
                                     <div class="block_content">
                                         <div class="effect">
                                             <a href="#"> <img class="img-fluid"
-                                                              src="modules/novpagemanage/img/64cc43a522417168a8f8418b3d783545.jpg"
+                                                              src="{{asset('assets/front/modules/novpagemanage/img/64cc43a522417168a8f8418b3d783545.jpg')}}"
                                                               alt="banner-5" title="banner-5"></a>
                                         </div>
                                     </div>
@@ -2211,12 +2231,12 @@
                                                         <a href="smartphone-tablet/1-40-hummingbird-printed-t-shirt.html#/1-size-s/6-color-taupe"
                                                            class="thumbnail product-thumbnail two-image">
                                                             <img class="img-fluid image-cover"
-                                                                 src="img/hummingbird-printed-t-shirt.jpg"
+                                                                 src="{{asset('assets/front/img/hummingbird-printed-t-shirt.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/24-large_default/hummingbird-printed-t-shirt.jpg"
                                                                  width="600" height="600">
                                                             <img class="img-fluid image-secondary"
-                                                                 src="img/hummingbird-printed-t-shirt.jpg"
+                                                                 src="{{asset('assets/front/img/hummingbird-printed-t-shirt.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/25-large_default/hummingbird-printed-t-shirt.jpg"
                                                                  width="600" height="600">
@@ -2303,11 +2323,11 @@
                                                         <a href="smartphone-tablet/2-60-brown-bear-printed-sweater.html#/1-size-s/11-color-black"
                                                            class="thumbnail product-thumbnail two-image">
                                                             <img class="img-fluid image-cover"
-                                                                 src="img/brown-bear-printed-sweater.jpg" alt=""
+                                                                 src="{{asset('assets/front/img/brown-bear-printed-sweater.jpg')}}" alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/29-large_default/brown-bear-printed-sweater.jpg"
                                                                  width="600" height="600">
                                                             <img class="img-fluid image-secondary"
-                                                                 src="img/brown-bear-printed-sweater.jpg" alt=""
+                                                                 src="{{asset('assets/front/img/brown-bear-printed-sweater.jpg')}}" alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/30-large_default/brown-bear-printed-sweater.jpg"
                                                                  width="600" height="600">
                                                         </a>
@@ -2395,12 +2415,12 @@
                                                         <a href="smartphone-tablet/3-95-the-best-is-yet-to-come-framed-poster.html#/1-size-s/13-color-orange"
                                                            class="thumbnail product-thumbnail two-image">
                                                             <img class="img-fluid image-cover"
-                                                                 src="img/the-best-is-yet-to-come-framed-poster.jpg"
+                                                                 src="{{asset('assets/front/img/the-best-is-yet-to-come-framed-poster.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/34-large_default/the-best-is-yet-to-come-framed-poster.jpg"
                                                                  width="600" height="600">
                                                             <img class="img-fluid image-secondary"
-                                                                 src="img/the-best-is-yet-to-come-framed-poster.jpg"
+                                                                 src="{{asset('assets/front/img/the-best-is-yet-to-come-framed-poster.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/35-large_default/the-best-is-yet-to-come-framed-poster.jpg"
                                                                  width="600" height="600">
@@ -2487,12 +2507,12 @@
                                                         <a href="home-appliance/4-112-the-adventure-begins-framed-poster.html#/1-size-s/9-color-off_white"
                                                            class="thumbnail product-thumbnail two-image">
                                                             <img class="img-fluid image-cover"
-                                                                 src="img/the-adventure-begins-framed-poster.jpg"
+                                                                 src="{{asset('assets/front/img/the-adventure-begins-framed-poster.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/39-large_default/the-adventure-begins-framed-poster.jpg"
                                                                  width="600" height="600">
                                                             <img class="img-fluid image-secondary"
-                                                                 src="img/the-adventure-begins-framed-poster.jpg"
+                                                                 src="{{asset('assets/front/img/the-adventure-begins-framed-poster.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/43-large_default/the-adventure-begins-framed-poster.jpg"
                                                                  width="600" height="600">
@@ -2581,12 +2601,12 @@
                                                         <a href="audio/5-134-today-is-a-good-day-framed-poster.html#/1-size-s/13-color-orange"
                                                            class="thumbnail product-thumbnail two-image">
                                                             <img class="img-fluid image-cover"
-                                                                 src="img/today-is-a-good-day-framed-poster.jpg"
+                                                                 src="{{asset('assets/front/img/today-is-a-good-day-framed-poster.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/44-large_default/today-is-a-good-day-framed-poster.jpg"
                                                                  width="600" height="600">
                                                             <img class="img-fluid image-secondary"
-                                                                 src="img/today-is-a-good-day-framed-poster.jpg"
+                                                                 src="{{asset('assets/front/img/today-is-a-good-day-framed-poster.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/45-large_default/today-is-a-good-day-framed-poster.jpg"
                                                                  width="600" height="600">
@@ -2673,12 +2693,12 @@
                                                         <a href="home-appliance/6-nullam-tempor-orci-eu-pretium.html"
                                                            class="thumbnail product-thumbnail two-image">
                                                             <img class="img-fluid image-cover"
-                                                                 src="img/nullam-tempor-orci-eu-pretium.jpg"
+                                                                 src="{{asset('assets/front/img/nullam-tempor-orci-eu-pretium.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/49-large_default/nullam-tempor-orci-eu-pretium.jpg"
                                                                  width="600" height="600">
                                                             <img class="img-fluid image-secondary"
-                                                                 src="img/nullam-tempor-orci-eu-pretium.jpg"
+                                                                 src="{{asset('assets/front/img/nullam-tempor-orci-eu-pretium.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/50-large_default/nullam-tempor-orci-eu-pretium.jpg"
                                                                  width="600" height="600">
@@ -2767,12 +2787,12 @@
                                                         <a href="home-appliance/7-155-donec-non-lectus-ac-erat-sedei.html#/1-size-s/10-color-red"
                                                            class="thumbnail product-thumbnail two-image">
                                                             <img class="img-fluid image-cover"
-                                                                 src="img/donec-non-lectus-ac-erat-sedei.jpg"
+                                                                 src="{{asset('assets/front/img/donec-non-lectus-ac-erat-sedei.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/54-large_default/donec-non-lectus-ac-erat-sedei.jpg"
                                                                  width="600" height="600">
                                                             <img class="img-fluid image-secondary"
-                                                                 src="img/donec-non-lectus-ac-erat-sedei.jpg"
+                                                                 src="{{asset('assets/front/img/donec-non-lectus-ac-erat-sedei.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/55-large_default/donec-non-lectus-ac-erat-sedei.jpg"
                                                                  width="600" height="600">
@@ -2859,12 +2879,12 @@
                                                         <a href="audio/8-172-curabitur-in-lorem-sit-ameten-alt.html#/1-size-s/10-color-red"
                                                            class="thumbnail product-thumbnail two-image">
                                                             <img class="img-fluid image-cover"
-                                                                 src="img/curabitur-in-lorem-sit-ameten-alt.jpg"
+                                                                 src="{{asset('assets/front/img/curabitur-in-lorem-sit-ameten-alt.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/59-large_default/curabitur-in-lorem-sit-ameten-alt.jpg"
                                                                  width="600" height="600">
                                                             <img class="img-fluid image-secondary"
-                                                                 src="img/curabitur-in-lorem-sit-ameten-alt.jpg"
+                                                                 src="{{asset('assets/front/img/curabitur-in-lorem-sit-ameten-alt.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/60-large_default/curabitur-in-lorem-sit-ameten-alt.jpg"
                                                                  width="600" height="600">
@@ -2953,12 +2973,12 @@
                                                         <a href="smartphone-tablet/9-179-mauris-feugiat-et-dui-sit-amet.html#/1-size-s/15-color-green"
                                                            class="thumbnail product-thumbnail two-image">
                                                             <img class="img-fluid image-cover"
-                                                                 src="img/mauris-feugiat-et-dui-sit-amet.jpg"
+                                                                 src="{{asset('assets/front/img/mauris-feugiat-et-dui-sit-amet.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/64-large_default/mauris-feugiat-et-dui-sit-amet.jpg"
                                                                  width="600" height="600">
                                                             <img class="img-fluid image-secondary"
-                                                                 src="img/mauris-feugiat-et-dui-sit-amet.jpg"
+                                                                 src="{{asset('assets/front/img/mauris-feugiat-et-dui-sit-amet.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/65-large_default/mauris-feugiat-et-dui-sit-amet.jpg"
                                                                  width="600" height="600">
@@ -3045,12 +3065,12 @@
                                                         <a href="smartphone-tablet/10-192-nullam-lacinia-metus-posuere.html#/1-size-s/18-color-pink"
                                                            class="thumbnail product-thumbnail two-image">
                                                             <img class="img-fluid image-cover"
-                                                                 src="img/nullam-lacinia-metus-posuere.jpg"
+                                                                 src="{{asset('assets/front/img/nullam-lacinia-metus-posuere.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/69-large_default/nullam-lacinia-metus-posuere.jpg"
                                                                  width="600" height="600">
                                                             <img class="img-fluid image-secondary"
-                                                                 src="img/nullam-lacinia-metus-posuere.jpg"
+                                                                 src="{{asset('assets/front/img/nullam-lacinia-metus-posuere.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/70-large_default/nullam-lacinia-metus-posuere.jpg"
                                                                  width="600" height="600">
@@ -3139,12 +3159,12 @@
                                                         <a href="home-appliance/12-232-nam-volutpat-justo-a-vehicula.html#/1-size-s/11-color-black"
                                                            class="thumbnail product-thumbnail two-image">
                                                             <img class="img-fluid image-cover"
-                                                                 src="img/nam-volutpat-justo-a-vehicula.jpg"
+                                                                 src="{{asset('assets/front/img/nam-volutpat-justo-a-vehicula.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/79-large_default/nam-volutpat-justo-a-vehicula.jpg"
                                                                  width="600" height="600">
                                                             <img class="img-fluid image-secondary"
-                                                                 src="img/nam-volutpat-justo-a-vehicula.jpg"
+                                                                 src="{{asset('assets/front/img/nam-volutpat-justo-a-vehicula.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/80-large_default/nam-volutpat-justo-a-vehicula.jpg"
                                                                  width="600" height="600">
@@ -3237,12 +3257,12 @@
                                                         <a href="audio/13-254-proin-placerat-lacus-eget-auctor.html#/1-size-s/10-color-red"
                                                            class="thumbnail product-thumbnail two-image">
                                                             <img class="img-fluid image-cover"
-                                                                 src="img/proin-placerat-lacus-eget-auctor.jpg"
+                                                                 src="{{asset('assets/front/img/proin-placerat-lacus-eget-auctor.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/84-large_default/proin-placerat-lacus-eget-auctor.jpg"
                                                                  width="600" height="600">
                                                             <img class="img-fluid image-secondary"
-                                                                 src="img/proin-placerat-lacus-eget-auctor.jpg"
+                                                                 src="{{asset('assets/front/img/proin-placerat-lacus-eget-auctor.jpg')}}"
                                                                  alt=""
                                                                  data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/85-large_default/proin-placerat-lacus-eget-auctor.jpg"
                                                                  width="600" height="600">
@@ -3348,12 +3368,12 @@
                                                             <a href="smartphone-tablet/1-40-hummingbird-printed-t-shirt.html#/1-size-s/6-color-taupe"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/hummingbird-printed-t-shirt.jpg"
+                                                                     src="{{asset('assets/front/img/hummingbird-printed-t-shirt.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/24-large_default/hummingbird-printed-t-shirt.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/hummingbird-printed-t-shirt.jpg"
+                                                                     src="{{asset('assets/front/img/hummingbird-printed-t-shirt.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/25-large_default/hummingbird-printed-t-shirt.jpg"
                                                                      width="600" height="600">
@@ -3411,12 +3431,12 @@
                                                             <a href="smartphone-tablet/2-60-brown-bear-printed-sweater.html#/1-size-s/11-color-black"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/brown-bear-printed-sweater.jpg"
+                                                                     src="{{asset('assets/front/img/brown-bear-printed-sweater.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/29-large_default/brown-bear-printed-sweater.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/brown-bear-printed-sweater.jpg"
+                                                                     src="{{asset('assets/front/img/brown-bear-printed-sweater.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/30-large_default/brown-bear-printed-sweater.jpg"
                                                                      width="600" height="600">
@@ -3474,12 +3494,12 @@
                                                             <a href="smartphone-tablet/3-95-the-best-is-yet-to-come-framed-poster.html#/1-size-s/13-color-orange"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/the-best-is-yet-to-come-framed-poster.jpg"
+                                                                     src="{{asset('assets/front/img/the-best-is-yet-to-come-framed-poster.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/34-large_default/the-best-is-yet-to-come-framed-poster.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/the-best-is-yet-to-come-framed-poster.jpg"
+                                                                     src="{{asset('assets/front/img/the-best-is-yet-to-come-framed-poster.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/35-large_default/the-best-is-yet-to-come-framed-poster.jpg"
                                                                      width="600" height="600">
@@ -3537,12 +3557,12 @@
                                                             <a href="home-appliance/4-112-the-adventure-begins-framed-poster.html#/1-size-s/9-color-off_white"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/the-adventure-begins-framed-poster.jpg"
+                                                                     src="{{asset('assets/front/img/the-adventure-begins-framed-poster.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/39-large_default/the-adventure-begins-framed-poster.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/the-adventure-begins-framed-poster.jpg"
+                                                                     src="{{asset('assets/front/img/the-adventure-begins-framed-poster.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/43-large_default/the-adventure-begins-framed-poster.jpg"
                                                                      width="600" height="600">
@@ -3600,12 +3620,12 @@
                                                             <a href="audio/5-134-today-is-a-good-day-framed-poster.html#/1-size-s/13-color-orange"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/today-is-a-good-day-framed-poster.jpg"
-                                                                     alt=""
+                                                                     src="{{asset('assets/front/img/today-is-a-good-day-framed-poster.jpg')}}"
+                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/44-large_default/today-is-a-good-day-framed-poster.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/today-is-a-good-day-framed-poster.jpg"
+                                                                     src="{{asset('assets/front/img/today-is-a-good-day-framed-poster.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/45-large_default/today-is-a-good-day-framed-poster.jpg"
                                                                      width="600" height="600">
@@ -3663,12 +3683,12 @@
                                                             <a href="home-appliance/6-nullam-tempor-orci-eu-pretium.html"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/nullam-tempor-orci-eu-pretium.jpg"
+                                                                     src="{{asset('assets/front/img/nullam-tempor-orci-eu-pretium.jpg')}}"
                                                                      alt=""
-                                                                     data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/49-large_default/nullam-tempor-orci-eu-pretium.jpg"
+                                                                     ولاد الشمس      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/49-large_default/nullam-tempor-orci-eu-pretium.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/nullam-tempor-orci-eu-pretium.jpg"
+                                                                     src="{{asset('assets/front/img/nullam-tempor-orci-eu-pretium.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/50-large_default/nullam-tempor-orci-eu-pretium.jpg"
                                                                      width="600" height="600">
@@ -3728,12 +3748,12 @@
                                                             <a href="home-appliance/7-155-donec-non-lectus-ac-erat-sedei.html#/1-size-s/10-color-red"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/donec-non-lectus-ac-erat-sedei.jpg"
+                                                                     src="{{asset('assets/front/img/donec-non-lectus-ac-erat-sedei.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/54-large_default/donec-non-lectus-ac-erat-sedei.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/donec-non-lectus-ac-erat-sedei.jpg"
+                                                                     src="{{asset('assets/front/img/donec-non-lectus-ac-erat-sedei.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/55-large_default/donec-non-lectus-ac-erat-sedei.jpg"
                                                                      width="600" height="600">
@@ -3791,12 +3811,12 @@
                                                             <a href="audio/8-172-curabitur-in-lorem-sit-ameten-alt.html#/1-size-s/10-color-red"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/curabitur-in-lorem-sit-ameten-alt.jpg"
+                                                                     src="{{asset('assets/front/img/curabitur-in-lorem-sit-ameten-alt.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/59-large_default/curabitur-in-lorem-sit-ameten-alt.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/curabitur-in-lorem-sit-ameten-alt.jpg"
+                                                                     src="{{asset('assets/front/img/curabitur-in-lorem-sit-ameten-alt.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/60-large_default/curabitur-in-lorem-sit-ameten-alt.jpg"
                                                                      width="600" height="600">
@@ -3854,12 +3874,12 @@
                                                             <a href="smartphone-tablet/9-179-mauris-feugiat-et-dui-sit-amet.html#/1-size-s/15-color-green"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/mauris-feugiat-et-dui-sit-amet.jpg"
+                                                                     src="{{asset('assets/front/img/mauris-feugiat-et-dui-sit-amet.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/64-large_default/mauris-feugiat-et-dui-sit-amet.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/mauris-feugiat-et-dui-sit-amet.jpg"
+                                                                     src="{{asset('assets/front/img/mauris-feugiat-et-dui-sit-amet.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/65-large_default/mauris-feugiat-et-dui-sit-amet.jpg"
                                                                      width="600" height="600">
@@ -3917,12 +3937,12 @@
                                                             <a href="smartphone-tablet/10-192-nullam-lacinia-metus-posuere.html#/1-size-s/18-color-pink"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/nullam-lacinia-metus-posuere.jpg"
+                                                                     src="{{asset('assets/front/img/nullam-lacinia-metus-posuere.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/69-large_default/nullam-lacinia-metus-posuere.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/nullam-lacinia-metus-posuere.jpg"
+                                                                     src="{{asset('assets/front/img/nullam-lacinia-metus-posuere.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/70-large_default/nullam-lacinia-metus-posuere.jpg"
                                                                      width="600" height="600">
@@ -3980,12 +4000,12 @@
                                                             <a href="home-appliance/12-232-nam-volutpat-justo-a-vehicula.html#/1-size-s/11-color-black"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/nam-volutpat-justo-a-vehicula.jpg"
+                                                                     src="{{asset('assets/front/img/nam-volutpat-justo-a-vehicula.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/79-large_default/nam-volutpat-justo-a-vehicula.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/nam-volutpat-justo-a-vehicula.jpg"
+                                                                     src="{{asset('assets/front/img/nam-volutpat-justo-a-vehicula.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/80-large_default/nam-volutpat-justo-a-vehicula.jpg"
                                                                      width="600" height="600">
@@ -4046,12 +4066,12 @@
                                                             <a href="audio/13-254-proin-placerat-lacus-eget-auctor.html#/1-size-s/10-color-red"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/proin-placerat-lacus-eget-auctor.jpg"
+                                                                     src="{{asset('assets/front/img/proin-placerat-lacus-eget-auctor.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/84-large_default/proin-placerat-lacus-eget-auctor.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/proin-placerat-lacus-eget-auctor.jpg"
+                                                                     src="{{asset('assets/front/img/proin-placerat-lacus-eget-auctor.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/85-large_default/proin-placerat-lacus-eget-auctor.jpg"
                                                                      width="600" height="600">
@@ -4111,12 +4131,12 @@
                                                             <a href="smartphone-tablet/14-270-donec-laoreet-imperdiet-elit-ut.html#/1-size-s/6-color-taupe"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/donec-laoreet-imperdiet-elit-ut.jpg"
+                                                                     src="{{asset('assets/front/img/donec-laoreet-imperdiet-elit-ut.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/89-large_default/donec-laoreet-imperdiet-elit-ut.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/donec-laoreet-imperdiet-elit-ut.jpg"
+                                                                     src="{{asset('assets/front/img/donec-laoreet-imperdiet-elit-ut.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/90-large_default/donec-laoreet-imperdiet-elit-ut.jpg"
                                                                      width="600" height="600">
@@ -4174,12 +4194,12 @@
                                                             <a href="audio/15-303-nunc-tempus-velit-quis-urnanb.html#/1-size-s/10-color-red"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/nunc-tempus-velit-quis-urnanb.jpg"
+                                                                     src="{{asset('assets/front/img/nunc-tempus-velit-quis-urnanb.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/94-large_default/nunc-tempus-velit-quis-urnanb.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/nunc-tempus-velit-quis-urnanb.jpg"
+                                                                     src="{{asset('assets/front/img/nunc-tempus-velit-quis-urnanb.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/95-large_default/nunc-tempus-velit-quis-urnanb.jpg"
                                                                      width="600" height="600">
@@ -4240,12 +4260,12 @@
                                                             <a href="home-appliance/16-323-cras-consequat-quis-dolor-eunde.html#/1-size-s/11-color-black"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/cras-consequat-quis-dolor-eunde.jpg"
+                                                                     src="{{asset('assets/front/img/cras-consequat-quis-dolor-eunde.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/99-large_default/cras-consequat-quis-dolor-eunde.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/cras-consequat-quis-dolor-eunde.jpg"
+                                                                     src="{{asset('assets/front/img/cras-consequat-quis-dolor-eunde.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/100-large_default/cras-consequat-quis-dolor-eunde.jpg"
                                                                      width="600" height="600">
@@ -4306,12 +4326,12 @@
                                                             <a href="camera-photo/17-328-nam-feugiat-tellus-nec-ultrices.html#/1-size-s/10-color-red"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/nam-feugiat-tellus-nec-ultrices.jpg"
+                                                                     src="{{asset('assets/front/img/nam-feugiat-tellus-nec-ultrices.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/104-large_default/nam-feugiat-tellus-nec-ultrices.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/nam-feugiat-tellus-nec-ultrices.jpg"
+                                                                     src="{{asset('assets/front/img/nam-feugiat-tellus-nec-ultrices.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/105-large_default/nam-feugiat-tellus-nec-ultrices.jpg"
                                                                      width="600" height="600">
@@ -4369,17 +4389,17 @@
                                                             <a href="home-appliance/18-363-mauris-semper-mattis-gravida.html#/1-size-s/10-color-red"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/mauris-semper-mattis-gravida.jpg"
+                                                                     src="{{asset('assets/front/img/mauris-semper-mattis-gravida.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/109-large_default/mauris-semper-mattis-gravida.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/mauris-semper-mattis-gravida.jpg"
+                                                                     src="{{asset('assets/front/img/mauris-semper-mattis-gravida.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/110-large_default/mauris-semper-mattis-gravida.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/mauris-semper-mattis-gravida.jpg"
+                                                                     src="{{asset('assets/front/img/mauris-semper-mattis-gravida.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/110-large_default/mauris-semper-mattis-gravida.jpg"
                                                                      width="600" height="600">
@@ -4437,12 +4457,12 @@
                                                             <a href="home-appliance/19-383-vivamus-non-ante-quis-est-rhont.html#/1-size-s/10-color-red"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/vivamus-non-ante-quis-est-rhont.jpg"
+                                                                     src="{{asset('assets/front/img/vivamus-non-ante-quis-est-rhont.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/115-large_default/vivamus-non-ante-quis-est-rhont.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/vivamus-non-ante-quis-est-rhont.jpg"
+                                                                     src="{{asset('assets/front/img/vivamus-non-ante-quis-est-rhont.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/116-large_default/vivamus-non-ante-quis-est-rhont.jpg"
                                                                      width="600" height="600">
@@ -4502,12 +4522,12 @@
                                                             <a href="audio/21-391-nunc-eros-lacus-porta-sed-mattis.html#/1-size-s/13-color-orange"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/nunc-eros-lacus-porta-sed-mattis.jpg"
+                                                                     src="{{asset('assets/front/img/nunc-eros-lacus-porta-sed-mattis.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/120-large_default/nunc-eros-lacus-porta-sed-mattis.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/nunc-eros-lacus-porta-sed-mattis.jpg"
+                                                                     src="{{asset('assets/front/img/nunc-eros-lacus-porta-sed-mattis.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/121-large_default/nunc-eros-lacus-porta-sed-mattis.jpg"
                                                                      width="600" height="600">
@@ -4568,12 +4588,12 @@
                                                             <a href="audio/22-408-aenean-porta-ligula-egestas-east.html#/1-size-s/10-color-red"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/aenean-porta-ligula-egestas-east.jpg"
+                                                                     src="'{{asset('assets/front/img/aenean-porta-ligula-egestas-east.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/125-large_default/aenean-porta-ligula-egestas-east.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/aenean-porta-ligula-egestas-east.jpg"
+                                                                     src="{{asset('assets/front/img/aenean-porta-ligula-egestas-east.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/126-large_default/aenean-porta-ligula-egestas-east.jpg"
                                                                      width="600" height="600">
@@ -4631,12 +4651,12 @@
                                                             <a href="home-appliance/23-443-aliquam-in-augue-ac-enim-tinci.html#/1-size-s/10-color-red"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/aliquam-in-augue-ac-enim-tinci.jpg"
+                                                                     src="{{asset('assets/front/img/aliquam-in-augue-ac-enim-tinci.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/131-large_default/aliquam-in-augue-ac-enim-tinci.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/aliquam-in-augue-ac-enim-tinci.jpg"
+                                                                     src="{{asset('assets/front/img/aliquam-in-augue-ac-enim-tinci.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/132-large_default/aliquam-in-augue-ac-enim-tinci.jpg"
                                                                      width="600" height="600">
@@ -4697,12 +4717,12 @@
                                                             <a href="camera-photo/24-nullam-sed-sollicitudin-mauris.html"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/nullam-sed-sollicitudin-mauris.jpg"
+                                                                     src="{{asset('assets/front/img/nullam-sed-sollicitudin-mauris.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/137-large_default/nullam-sed-sollicitudin-mauris.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/nullam-sed-sollicitudin-mauris.jpg"
+                                                                     src="{{asset('assets/front/img/nullam-sed-sollicitudin-mauris.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/138-large_default/nullam-sed-sollicitudin-mauris.jpg"
                                                                      width="600" height="600">
@@ -4763,12 +4783,12 @@
                                                             <a href="smartphone-tablet/26-nullam-sed-sollicitudin-valumis.html"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/nullam-sed-sollicitudin-valumis.jpg"
+                                                                     src="{{asset('assets/front/img/nullam-sed-sollicitudin-valumis.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/146-large_default/nullam-sed-sollicitudin-valumis.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/nullam-sed-sollicitudin-valumis.jpg"
+                                                                     src="{{asset('assets/front/img/nullam-sed-sollicitudin-valumis.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/147-large_default/nullam-sed-sollicitudin-valumis.jpg"
                                                                      width="600" height="600">
@@ -4885,12 +4905,12 @@
                                                             <a href="smartphone-tablet/1-40-hummingbird-printed-t-shirt.html#/1-size-s/6-color-taupe"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="img/hummingbird-printed-t-shirt.jpg"
+                                                                     src="{{asset('assets/front/img/hummingbird-printed-t-shirt.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/24-large_default/hummingbird-printed-t-shirt.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="img/hummingbird-printed-t-shirt.jpg"
+                                                                     src="{{asset('assets/front/img/hummingbird-printed-t-shirt.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/25-large_default/hummingbird-printed-t-shirt.jpg"
                                                                      width="600" height="600">
@@ -4948,12 +4968,12 @@
                                                             <a href="smartphone-tablet/2-60-brown-bear-printed-sweater.html#/1-size-s/11-color-black"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="../29-home_default/brown-bear-printed-sweater.jpg"
+                                                                     src="{{asset('assets/front/img/brown-bear-printed-sweater.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/29-large_default/brown-bear-printed-sweater.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="../30-home_default/brown-bear-printed-sweater.jpg"
+                                                                     src="{{asset('assets/front/img/brown-bear-printed-sweater.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/30-large_default/brown-bear-printed-sweater.jpg"
                                                                      width="600" height="600">
@@ -5011,12 +5031,12 @@
                                                             <a href="smartphone-tablet/3-95-the-best-is-yet-to-come-framed-poster.html#/1-size-s/13-color-orange"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="../34-home_default/the-best-is-yet-to-come-framed-poster.jpg"
+                                                                     src="{{asset('assets/front/img/the-best-is-yet-to-come-framed-poster.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/34-large_default/the-best-is-yet-to-come-framed-poster.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="../35-home_default/the-best-is-yet-to-come-framed-poster.jpg"
+                                                                     src="{{asset('assets/front/img/the-best-is-yet-to-come-framed-poster.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/35-large_default/the-best-is-yet-to-come-framed-poster.jpg"
                                                                      width="600" height="600">
@@ -5076,12 +5096,12 @@
                                                             <a href="home-appliance/4-112-the-adventure-begins-framed-poster.html#/1-size-s/9-color-off_white"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="../39-home_default/the-adventure-begins-framed-poster.jpg"
+                                                                     src="{{asset('assets/front/img/the-adventure-begins-framed-poster.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/39-large_default/the-adventure-begins-framed-poster.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="../43-home_default/the-adventure-begins-framed-poster.jpg"
+                                                                     src="{{asset('assets/front/img/the-adventure-begins-framed-poster.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/43-large_default/the-adventure-begins-framed-poster.jpg"
                                                                      width="600" height="600">
@@ -5139,12 +5159,12 @@
                                                             <a href="audio/5-134-today-is-a-good-day-framed-poster.html#/1-size-s/13-color-orange"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="../44-home_default/today-is-a-good-day-framed-poster.jpg"
+                                                                     src="{{asset('assets/front/img/today-is-a-good-day-framed-poster.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/44-large_default/today-is-a-good-day-framed-poster.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="../45-home_default/today-is-a-good-day-framed-poster.jpg"
+                                                                     src="{{asset('assets/front/img/today-is-a-good-day-framed-poster.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/45-large_default/today-is-a-good-day-framed-poster.jpg"
                                                                      width="600" height="600">
@@ -5202,12 +5222,12 @@
                                                             <a href="home-appliance/6-nullam-tempor-orci-eu-pretium.html"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="../49-home_default/nullam-tempor-orci-eu-pretium.jpg"
+                                                                     src="{{asset('assets/front/img/nullam-tempor-orci-eu-pretium.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/49-large_default/nullam-tempor-orci-eu-pretium.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="../50-home_default/nullam-tempor-orci-eu-pretium.jpg"
+                                                                     src="{{asset('assets/front/img/nullam-tempor-orci-eu-pretium.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/50-large_default/nullam-tempor-orci-eu-pretium.jpg"
                                                                      width="600" height="600">
@@ -5283,12 +5303,12 @@
                                                             <a href="smartphone-tablet/1-40-hummingbird-printed-t-shirt.html#/1-size-s/6-color-taupe"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="../24-home_default/hummingbird-printed-t-shirt.jpg"
+                                                                     src="{{asset('assets/front/img/hummingbird-printed-t-shirt.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/24-large_default/hummingbird-printed-t-shirt.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="../25-home_default/hummingbird-printed-t-shirt.jpg"
+                                                                     src="{{asset('assets/front/img/hummingbird-printed-t-shirt.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/25-large_default/hummingbird-printed-t-shirt.jpg"
                                                                      width="600" height="600">
@@ -5346,12 +5366,12 @@
                                                             <a href="smartphone-tablet/2-60-brown-bear-printed-sweater.html#/1-size-s/11-color-black"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="../29-home_default/brown-bear-printed-sweater.jpg"
+                                                                     src="{{asset('assets/front/img/brown-bear-printed-sweater.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/29-large_default/brown-bear-printed-sweater.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="../30-home_default/brown-bear-printed-sweater.jpg"
+                                                                     src="{{asset('assets/front/img/brown-bear-printed-sweater.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/30-large_default/brown-bear-printed-sweater.jpg"
                                                                      width="600" height="600">
@@ -5409,12 +5429,12 @@
                                                             <a href="smartphone-tablet/3-95-the-best-is-yet-to-come-framed-poster.html#/1-size-s/13-color-orange"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="../34-home_default/the-best-is-yet-to-come-framed-poster.jpg"
+                                                                     src="{{asset('assets/front/img/the-best-is-yet-to-come-framed-poster.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/34-large_default/the-best-is-yet-to-come-framed-poster.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="../35-home_default/the-best-is-yet-to-come-framed-poster.jpg"
+                                                                     src="{{asset('assets/front/img/the-best-is-yet-to-come-framed-poster.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/35-large_default/the-best-is-yet-to-come-framed-poster.jpg"
                                                                      width="600" height="600">
@@ -5474,12 +5494,12 @@
                                                             <a href="home-appliance/4-112-the-adventure-begins-framed-poster.html#/1-size-s/9-color-off_white"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="../39-home_default/the-adventure-begins-framed-poster.jpg"
+                                                                     src="{{asset('assets/front/img/the-adventure-begins-framed-poster.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/39-large_default/the-adventure-begins-framed-poster.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="../43-home_default/the-adventure-begins-framed-poster.jpg"
+                                                                     src="{{asset('assets/front/img/the-adventure-begins-framed-poster.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/43-large_default/the-adventure-begins-framed-poster.jpg"
                                                                      width="600" height="600">
@@ -5537,12 +5557,12 @@
                                                             <a href="home-appliance/6-nullam-tempor-orci-eu-pretium.html"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="../49-home_default/nullam-tempor-orci-eu-pretium.jpg"
+                                                                     src="{{asset('assets/front/img/nullam-tempor-orci-eu-pretium.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/49-large_default/nullam-tempor-orci-eu-pretium.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="../50-home_default/nullam-tempor-orci-eu-pretium.jpg"
+                                                                     src="{{asset('assets/front/img/nullam-tempor-orci-eu-pretium.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/50-large_default/nullam-tempor-orci-eu-pretium.jpg"
                                                                      width="600" height="600">
@@ -5600,12 +5620,12 @@
                                                             <a href="home-appliance/7-155-donec-non-lectus-ac-erat-sedei.html#/1-size-s/10-color-red"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="../54-home_default/donec-non-lectus-ac-erat-sedei.jpg"
+                                                                     src="{{asset('assets/front/img/donec-non-lectus-ac-erat-sedei.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/54-large_default/donec-non-lectus-ac-erat-sedei.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="../55-home_default/donec-non-lectus-ac-erat-sedei.jpg"
+                                                                     src="{{asset('assets/front/img/donec-non-lectus-ac-erat-sedei.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/55-large_default/donec-non-lectus-ac-erat-sedei.jpg"
                                                                      width="600" height="600">
@@ -5681,12 +5701,12 @@
                                                             <a href="smartphone-tablet/2-60-brown-bear-printed-sweater.html#/1-size-s/11-color-black"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="../29-home_default/brown-bear-printed-sweater.jpg"
+                                                                     src="{{asset('assets/front/img/brown-bear-printed-sweater.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/29-large_default/brown-bear-printed-sweater.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="../30-home_default/brown-bear-printed-sweater.jpg"
+                                                                     src="{{asset('assets/front/img/brown-bear-printed-sweater.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/30-large_default/brown-bear-printed-sweater.jpg"
                                                                      width="600" height="600">
@@ -5744,12 +5764,12 @@
                                                             <a href="home-appliance/7-155-donec-non-lectus-ac-erat-sedei.html#/1-size-s/10-color-red"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="../54-home_default/donec-non-lectus-ac-erat-sedei.jpg"
+                                                                     src="{{asset('assets/front/img/donec-non-lectus-ac-erat-sedei.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/54-large_default/donec-non-lectus-ac-erat-sedei.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="../55-home_default/donec-non-lectus-ac-erat-sedei.jpg"
+                                                                     src="{{asset('assets/front/img/donec-non-lectus-ac-erat-sedei.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/55-large_default/donec-non-lectus-ac-erat-sedei.jpg"
                                                                      width="600" height="600">
@@ -5807,12 +5827,12 @@
                                                             <a href="audio/8-172-curabitur-in-lorem-sit-ameten-alt.html#/1-size-s/10-color-red"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="../59-home_default/curabitur-in-lorem-sit-ameten-alt.jpg"
+                                                                     src="{{asset('assets/front/img/curabitur-in-lorem-sit-ameten-alt.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/59-large_default/curabitur-in-lorem-sit-ameten-alt.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="../60-home_default/curabitur-in-lorem-sit-ameten-alt.jpg"
+                                                                     src="{{asset('assets/front/img/curabitur-in-lorem-sit-ameten-alt.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/60-large_default/curabitur-in-lorem-sit-ameten-alt.jpg"
                                                                      width="600" height="600">
@@ -5872,12 +5892,12 @@
                                                             <a href="smartphone-tablet/10-192-nullam-lacinia-metus-posuere.html#/1-size-s/18-color-pink"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="../69-home_default/nullam-lacinia-metus-posuere.jpg"
+                                                                     src="{{asset('assets/front/img/nullam-lacinia-metus-posuere.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/69-large_default/nullam-lacinia-metus-posuere.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="../70-home_default/nullam-lacinia-metus-posuere.jpg"
+                                                                     src="{{asset('assets/front/img/nullam-lacinia-metus-posuere.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/70-large_default/nullam-lacinia-metus-posuere.jpg"
                                                                      width="600" height="600">
@@ -5935,12 +5955,12 @@
                                                             <a href="home-appliance/12-232-nam-volutpat-justo-a-vehicula.html#/1-size-s/11-color-black"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="../79-home_default/nam-volutpat-justo-a-vehicula.jpg"
+                                                                     src="{{asset('assets/front/img/nam-volutpat-justo-a-vehicula.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/79-large_default/nam-volutpat-justo-a-vehicula.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="../80-home_default/nam-volutpat-justo-a-vehicula.jpg"
+                                                                     src="{{asset('assets/front/img/nam-volutpat-justo-a-vehicula.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/80-large_default/nam-volutpat-justo-a-vehicula.jpg"
                                                                      width="600" height="600">
@@ -6001,12 +6021,12 @@
                                                             <a href="audio/13-254-proin-placerat-lacus-eget-auctor.html#/1-size-s/10-color-red"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="../84-home_default/proin-placerat-lacus-eget-auctor.jpg"
+                                                                     src="{{asset('assets/front/img/proin-placerat-lacus-eget-auctor.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/84-large_default/proin-placerat-lacus-eget-auctor.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="../85-home_default/proin-placerat-lacus-eget-auctor.jpg"
+                                                                     src="{{asset('assets/front/img/proin-placerat-lacus-eget-auctor.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/85-large_default/proin-placerat-lacus-eget-auctor.jpg"
                                                                      width="600" height="600">
@@ -6066,12 +6086,12 @@
                                                             <a href="smartphone-tablet/14-270-donec-laoreet-imperdiet-elit-ut.html#/1-size-s/6-color-taupe"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="../89-home_default/donec-laoreet-imperdiet-elit-ut.jpg"
+                                                                     src="{{asset('assets/front/img/donec-laoreet-imperdiet-elit-ut.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/89-large_default/donec-laoreet-imperdiet-elit-ut.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="../90-home_default/donec-laoreet-imperdiet-elit-ut.jpg"
+                                                                     src="{{asset('assets/front/img/donec-laoreet-imperdiet-elit-ut.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/90-large_default/donec-laoreet-imperdiet-elit-ut.jpg"
                                                                      width="600" height="600">
@@ -6129,12 +6149,12 @@
                                                             <a href="audio/15-303-nunc-tempus-velit-quis-urnanb.html#/1-size-s/10-color-red"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="../94-home_default/nunc-tempus-velit-quis-urnanb.jpg"
+                                                                     src="{{asset('assets/front/img/nunc-tempus-velit-quis-urnanb.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/94-large_default/nunc-tempus-velit-quis-urnanb.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="../95-home_default/nunc-tempus-velit-quis-urnanb.jpg"
+                                                                     src="{{asset('assets/front/img/nunc-tempus-velit-quis-urnanb.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/95-large_default/nunc-tempus-velit-quis-urnanb.jpg"
                                                                      width="600" height="600">
@@ -6195,12 +6215,12 @@
                                                             <a href="home-appliance/16-323-cras-consequat-quis-dolor-eunde.html#/1-size-s/11-color-black"
                                                                class="thumbnail product-thumbnail two-image">
                                                                 <img class="img-fluid image-cover"
-                                                                     src="../99-home_default/cras-consequat-quis-dolor-eunde.jpg"
+                                                                     src="{{asset('assets/front/img/cras-consequat-quis-dolor-eunde.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/99-large_default/cras-consequat-quis-dolor-eunde.jpg"
                                                                      width="600" height="600">
                                                                 <img class="img-fluid image-secondary"
-                                                                     src="../100-home_default/cras-consequat-quis-dolor-eunde.jpg"
+                                                                     src="{{asset('assets/front/img/cras-consequat-quis-dolor-eunde.jpg')}}"
                                                                      alt=""
                                                                      data-full-size-image-url="http://demo.bestprestashoptheme.com/savemart/100-large_default/cras-consequat-quis-dolor-eunde.jpg"
                                                                      width="600" height="600">

@@ -10,7 +10,7 @@
                     <div class="breadcrumb-wrapper col-12">
 
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="">{{trans('msg.main')}} </a>
+                            <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">{{trans('msg.mainpage')}} </a>
                             </li>
                             <li class="breadcrumb-item"><a href=""> {{trans('msg.editprofile')}} </a>
 

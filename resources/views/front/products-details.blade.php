@@ -321,7 +321,7 @@
                                                             <div class="product row no-gutters">
                                                                 <div class="product-image col-4">
                                                                     <img class="img-fluid"
-                                                                         src="../../24-medium_default/hummingbird-printed-t-shirt.jpg"
+                                                                         src="{{asset('assets/front/img/hummingbird-printed-t-shirt.jpg')}}"
                                                                          height="" width=""
                                                                          alt="Nullam sed sollicitudin mauris">
                                                                 </div>
