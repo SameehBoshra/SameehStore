@@ -36,7 +36,8 @@
 
                 </span>
                             <span class="avatar avatar-online">
-                  <img  style="height: 35px;" src="" alt="avatar"><i></i></span>
+                  <img  style="height: 35px;" src="" alt="avatar">
+                  <i></i></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="{{route('edit.profile',auth('admin')->user()->id)}}"><i
                                     class="ft-user"></i> {{trans('msg.editprofile')}} </a>
@@ -255,9 +256,6 @@
 
                 @endforeach
         </div>
-
-
-
     </div>
 </li>
 

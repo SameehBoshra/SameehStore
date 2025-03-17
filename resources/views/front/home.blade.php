@@ -1,5 +1,18 @@
 @extends('layouts.site')
+@section('style')
+.nivoSlider {
+    width: 80%; /* عرض أقل من الشاشة */
+    max-width: 700px; /* أقصى عرض */
+    margin: auto; /* توسيط العنصر */
+    overflow: hidden; /* تجنب التمدد */
+    height: 100;
 
+}
+.nivoSlider img {
+    width: 100%;
+}
+
+@stop
 @section('slider')
     <div id="displayTop" class="displaytopthree">
         <div class="container">
@@ -21,23 +34,30 @@
                             <div class="nov_preload">
                                 <div class="process-loading active">
                                     <div class="loader">
-                                        @isset($sliders)
-                                            @foreach($sliders as $slider)
-                                                <div class="dot"></div>
-                                            @endforeach
-                                        @endisset
+                                   {{--      @isset($sliders)
+                                        @if($sliders->isNotEmpty())
+                                        <img src="{{ asset($sliders[0]->photo) }}" alt=""
+                                        >
+                                        @endif
+                                    @endisset --}}
+
 
 
                                     </div>
                                 </div>
                             </div>
+
                             <div class="nivoSlider">
 
-                                @isset($sliders)
+                                 @isset($sliders)
                                     @foreach($sliders as $slider)
                                         <a href="#">
-                                            <img src="{{$slider -> photo }}"
-                                                 alt="" title="#htmlcaption_42">
+
+
+                                                 <img src="{{ asset('assets/images/sliders/'.$slider->photo) }}"
+                                                  alt="" title=""
+                                                  >
+
                                         </a>
                                     @endforeach
                                 @endisset
@@ -62,11 +82,11 @@
                     <div class="nov-row spacing-30 mt-15 col-lg-12 col-xs-12">
                         <div class="nov-row-wrap row">
                             <div class="nov-image col-lg-4 col-md-4">
-                                <div class="block">
+                             {{--    <div class="block">
                                     <div class="block_content">
                                         <div class="effect">
                                             <a href="#"> <img class="img-fluid"
-                                                              src="assets/images/1.jpg"
+                                                              src="{{asset('assets/images/laptop.jpeg')}}"
                                                               alt="banner3-1" title="banner3-1"></a>
 
 
@@ -79,7 +99,7 @@
                                     <div class="block_content">
                                         <div class="effect">
                                             <a href="#"> <img class="img-fluid"
-                                                              src="assets/images/2.jpg"
+                                                              src="{{asset('assets/images/laptop.jpeg')}}"
                                                               alt="banner3-1" title="banner3-1"></a>
 
 
@@ -91,15 +111,20 @@
                                 <div class="block">
                                     <div class="block_content">
                                         <div class="effect">
-                                            <a href="#"> <img class="img-fluid"
-                                                              src="assets/images/3.jpg"
-                                                              alt="banner3-1" title="banner3-1"></a>
+                                            <a href="#">
+
+
+                                                 <img class="img-fluid"
+                                                              src="{{asset('assets/images/laptop.jpeg')}}"
+                                                              alt="banner3-1" title="banner3-1">
+
+                                                            </a>
 
 
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <div class="nov-row  col-lg-12 col-xs-12">

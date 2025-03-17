@@ -31,12 +31,14 @@ class MainCategoryController extends Controller
 
 public function store(Request $request)
 {
-    try {
+  try {
         // Validate input
         $validator = Validator::make($request->all(), [
             'name' => 'required|min:3|max:100',
             'type' =>'required|in:1,2',
             'slug' => 'required|unique:categories,slug'.$request->id,
+            'photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Validate file
+
         ]);
 
         if ($validator->fails()) {
@@ -51,14 +53,24 @@ public function store(Request $request)
             $request->merge(['parent_id' => null]);
 
         }
+        if ($request->hasFile('photo'))
+        {
+            $file = $request->file('photo');
+            $filename = time() . '_' . $file->getClientOriginalName(); // Generate unique filename
+            $path = 'assets/images/categoiesPhoto/'; // Define storage path
+             $file->move(public_path($path), $filename);
+        }
 
         // Create category
-        Category::create($request->except(['_token','type']));
+
+       $category =Category::create($request->except(['_token','type']));
+        $category->photo = $path . $filename;
+        $category->save();
 
         return redirect()->route('dashboard.Category.index')->with(['success' => trans('msg.messageadd')]);
-    } catch (\Exception $ex) {
+ } catch (\Exception $ex) {
         return redirect()->route('dashboard.Category.index')->with(['error' => trans('msg.Somethingwrong')]);
-   }
+  }
 }
 
     /**

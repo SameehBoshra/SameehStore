@@ -5,18 +5,29 @@ function getfolder()
     return app()->getLocale()==='ar'?'css-rtl':'css';
 }
 
-function uploadImage($folder , $image)
+
+ function uploadImage1($folder , $image)
 {
      $image->store('/',$folder);
     $fileName=$image->hashName();
       return $fileName; // Return the file name if needed */
 
 
-     /*  if (!$image) {
+      if (!$image) {
         return null; // Return null if no file is provided
     }
 
     $filePath = $image->store($folder, 'public');
-    return asset('storage/' . $filePath); */
+    return asset('storage/' . $filePath);
 }
 
+
+
+
+
+
+function uploadImage($folder,$image){
+    $image->store('/', $folder);
+    $filename = $image->hashName();
+    return  $filename;
+ }

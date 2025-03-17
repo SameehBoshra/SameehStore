@@ -19,7 +19,7 @@
     <div class="main-menu-content hidden-content ">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
 
-            <li class="nav-item active"><a href=""><i class="la la-mouse-pointer"></i><span
+            <li class="nav-item active"><a id="main" href=""><i class="la la-mouse-pointer"></i><span
                         class="menu-title" data-i18n="nav.add_on_drag_drop.main">الرئيسية </span></a>
             </li>
 
@@ -40,10 +40,11 @@
                 </ul>
             </li> --}}
 
-
+             @can('categories')
             <li class="nav-item"><a href="">
-                <i class="la la-group"></i>
-                    <span class="menu-title" data-i18n="nav.dash.main">{{trans('msg.mainpart')}}  </span>
+                <i class="la la-server"></i>
+                    <span class="menu-title"  data-i18n="nav.dash.main">{{trans('msg.mainpart')}}  </span>
+
                     <span
                         class="badge badge badge-danger badge-pill float-right mr-2">
                         {{ App\Models\Category::parent()->count() }}
@@ -58,8 +59,9 @@
                     </li>
                 </ul>
             </li>
+            @endcan
 
-            <li class="nav-item"><a href=""><i class="la la-group"></i>
+           {{--  <li class="nav-item"><a href=""><i class="la la-group"></i>
                     <span class="menu-title" data-i18n="nav.dash.main"> {{trans('msg.subdepartments')}}   </span>
                     <span
                         class="badge badge badge-danger badge-pill float-right mr-2"> {{ App\Models\Category::child()->count() }}
@@ -73,9 +75,30 @@
                         {{trans('msg.add_sub_department')}}                        </a>
                     </li>
                 </ul>
-            </li>
+            </li> --}}
+
+
+              {{--  products  --}}
+              @can('products')
+              <li class="nav-item"><a href=""><i class="la la-group"></i>
+                <span class="menu-title" data-i18n="nav.dash.main"> {{trans('msg.productpage')}}   </span>
+                <span
+                    class="badge badge badge-danger badge-pill float-right mr-2"> {{ App\Models\Product::count() }}
+        </span>
+            </a>
+            <ul class="menu-content">
+                <li class="active"><a class="menu-item" href="{{route('dashboard.product.index')}}"
+                                      data-i18n="nav.dash.ecommerce"> {{trans('msg.showall')}}  </a>
+                </li>
+                <li><a class="menu-item" href="{{route('dashboard.product.general.create')}}" data-i18n="nav.dash.crypto">
+                        {{trans('msg.addproductpart')}}                        </a>
+                </li>
+            </ul>
+        </li>
+        @endcan
 
             {{--  Brands  --}}
+            @can('brands')
             <li class="nav-item"><a href=""><i class="la la-group"></i>
                 <span class="menu-title" data-i18n="nav.dash.main"> {{trans('msg.branddepartments')}}   </span>
                 <span
@@ -91,7 +114,9 @@
                 </li>
             </ul>
         </li>
+        @endcan
         {{--  Tags  --}}
+        @can('tage')
         <li class="nav-item"><a href=""><i class="la la-group"></i>
             <span class="menu-title" data-i18n="nav.dash.main"> {{trans('msg.tagpage')}}   </span>
             <span
@@ -107,24 +132,10 @@
             </li>
         </ul>
     </li>
+    @endcan
 
 
-            {{--  products  --}}
-            <li class="nav-item"><a href=""><i class="la la-group"></i>
-                    <span class="menu-title" data-i18n="nav.dash.main"> {{trans('msg.productpage')}}   </span>
-                    <span
-                        class="badge badge badge-danger badge-pill float-right mr-2"> {{ App\Models\Product::count() }}
-            </span>
-                </a>
-                <ul class="menu-content">
-                    <li class="active"><a class="menu-item" href="{{route('dashboard.product.index')}}"
-                                          data-i18n="nav.dash.ecommerce"> {{trans('msg.showall')}}  </a>
-                    </li>
-                    <li><a class="menu-item" href="{{route('dashboard.product.general.create')}}" data-i18n="nav.dash.crypto">
-                            {{trans('msg.addproductpart')}}                        </a>
-                    </li>
-                </ul>
-            </li>
+
 
                   {{--  product attributes  --}}
                   <li class="nav-item"><a href=""><i class="la la-group"></i>
@@ -134,19 +145,22 @@
             </span>
                 </a>
                 <ul class="menu-content">
-                    <li class="active"><a class="menu-item" href="{{route('dashboard.attribute.index')}}"
+                    <li class="active">
+                        <a class="menu-item" href="{{route('dashboard.attribute.index')}}"
                                           data-i18n="nav.dash.ecommerce"> {{trans('msg.showall')}}  </a>
                     </li>
-                    <li><a class="menu-item" href="{{route('dashboard.attribute.create')}}" data-i18n="nav.dash.crypto">
+                    <li>
+                        <a class="menu-item" href="{{route('dashboard.attribute.create')}}" data-i18n="nav.dash.crypto">
                             {{trans('msg.addattributepart')}}                        </a>
                     </li>
                 </ul>
             </li>
 
                               {{--  product attributes  options --}}
+                              @can('options')
                               <li class="nav-item"><a href=""><i class="la la-group"></i>
                                 <span class="menu-title" data-i18n="nav.dash.main"> {{trans('msg.optionpage')}}   </span>
-                                <span
+                                <spansilders
                                     class="badge badge badge-danger badge-pill float-right mr-2"> {{ App\Models\Option::count() }}
                         </span>
                             </a>
@@ -159,11 +173,24 @@
                                 </li>
                             </ul>
                         </li>
+                        @endcan
 
+{{-- silder --}}
+@can('silders')
+<li class=" nav-item"><a href="#">
+    <i class="la la-image"></i>
+    <span class="menu-title"
+    data-i18n="nav.gallery_pages.main">{{trans('msg.silderpage')}}</span></a>
+<ul class="menu-content">
+    <li><a class="menu-item" href="{{route('admin.sliders.create')}}"
+        data-i18n="nav.templates.vert.classic_menu">{{Trans('msg.silderimage')}}</a>
+ </li>
+</ul>
+</li>
+@endcan
+{{-- end main slider --}}
 
-
-
-
+{{--
             <li class="nav-item"><a href=""><i class="la la-male"></i>
                     <span class="menu-title" data-i18n="nav.dash.main">المتاجر  </span>
                     <span
@@ -177,9 +204,9 @@
                             متجر  </a>
                     </li>
                 </ul>
-            </li>
+            </li> --}}
 
-
+{{--
             <li class="nav-item"><a href=""><i class="la la-male"></i>
                     <span class="menu-title" data-i18n="nav.dash.main">الطلاب  </span>
                     <span
@@ -194,8 +221,8 @@
                     </li>
                 </ul>
             </li>
-
-
+ --}}
+{{--
             <li class="nav-item">
                 <a href=""><i class="la la-male"></i>
                     <span class="menu-title" data-i18n="nav.dash.main">تذاكر المراسلات   </span>
@@ -208,8 +235,45 @@
                     </li>
                 </ul>
             </li>
+ --}}
 
+{{-- permissions --}}
+     @can('roles')
+     <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title"
+                              data-i18n="nav.templates.main">{{trans('msg.permissions')}}</span></a>
+                <ul class="menu-content">
+                        <ul class="menu-content">
 
+                            <li class="active">
+                                <a class="menu-item" href="{{route('dashboard.roles.index')}}"
+                                                  data-i18n="nav.dash.ecommerce"> {{trans('msg.showall')}}  </a>
+                            </li>
+                            <li>
+                                <a class="menu-item" href="{{route('dashboard.roles.create')}}" data-i18n="nav.dash.crypto">
+                                    {{trans('msg.addpermission')}}                        </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+            @endcan
+            @can('users')
+            <li class="nav-item"><a href=""><i class="la la-male"></i>
+                <span class="menu-title" data-i18n="nav.dash.main">  {{trans('msg.dashboarduser')}} </span>
+            </a>
+            <ul class="menu-content">
+                <li class="active"><a class="menu-item" href="{{route('dashboard.users.index')}}"
+                                      data-i18n="nav.dash.ecommerce">  {{trans('msg.showall')}} </a>
+                </li>
+                <li><a class="menu-item" href="{{route('dashboard.users.create')}}" data-i18n="nav.dash.crypto">
+                    {{trans('msg.adddashboarduser')}} </a>
+                </li>
+            </ul>
+        </li>
+        @endcan
+{{-- settings --}}
+            @can('settings')
             <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title"
                                                                                     data-i18n="nav.templates.main">{{trans('msg.setting')}}</span></a>
                 <ul class="menu-content">
@@ -229,6 +293,10 @@
 
                 </ul>
             </li>
+            @endcan
+
+
+
             <li class=" navigation-header">
                 <span data-i18n="nav.category.layouts">Layouts</span><i class="la la-ellipsis-h ft-minus"
                                                                         data-toggle="tooltip"
@@ -740,23 +808,9 @@
                 </ul>
             </li>
             <li class=" nav-item"><a href="#"><i class="la la-image"></i><span class="menu-title"
-                                                                               data-i18n="nav.gallery_pages.main">Gallery</span></a>
+                      data-i18n="nav.gallery_pages.main">Gallery</span></a>
                 <ul class="menu-content">
-                    <li><a class="menu-item" href="gallery-grid.html" data-i18n="nav.gallery_pages.gallery_grid">Gallery
-                            Grid</a>
-                    </li>
-                    <li><a class="menu-item" href="gallery-grid-with-desc.html"
-                           data-i18n="nav.gallery_pages.gallery_grid_with_desc">Gallery Grid with Desc</a>
-                    </li>
-                    <li><a class="menu-item" href="gallery-masonry.html" data-i18n="nav.gallery_pages.gallery_masonry">Masonry
-                            Gallery</a>
-                    </li>
-                    <li><a class="menu-item" href="gallery-masonry-with-desc.html"
-                           data-i18n="nav.gallery_pages.gallery_masonry_with_desc">Masonry Gallery with Desc</a>
-                    </li>
-                    <li><a class="menu-item" href="gallery-hover-effects.html"
-                           data-i18n="nav.gallery_pages.gallery_hover_effects">Hover Effects</a>
-                    </li>
+
                 </ul>
             </li>
             <li class=" nav-item"><a href="#"><i class="la la-search"></i><span class="menu-title"

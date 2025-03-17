@@ -93,16 +93,17 @@
                                                     <div class="thumbnail-container">
                                                         <a href="audio/22-408-aenean-porta-ligula-egestas-east.html#/1-size-s/10-color-red"
                                                            class="thumbnail product-thumbnail two-image">
-                                                            <img class="img-fluid image-cover"
-                                                                 src="{{$product -> images[0] -> photo ?? ''}}"
-                                                                 alt=""
-                                                                 data-full-size-image-url="{{$product -> images[0] -> photo ?? ''}}"
-                                                                 width="600" height="600">
-                                                            <img class="img-fluid image-secondary"
-                                                                 src="{{$product -> images[0] -> photo ?? ''}}"
-                                                                 alt=""
-                                                                 data-full-size-image-url="{{$product -> images[0] -> photo ?? ''}}"
-                                                                 width="600" height="600">
+                                                           <img class="img-fluid image-cover"
+                                                           src="{{ asset($product->images[0]->image ?? '') }}"
+                                                           alt=""
+                                                           data-full-size-image-url="{{ asset($product->images[0]->image ?? '') }}"
+                                                           width="600" height="600">
+
+                                                      <img class="img-fluid image-secondary"
+                                                           src="{{ asset($product->images[0]->image ?? '') }}"
+                                                           alt=""
+                                                           data-full-size-image-url="{{ asset($product->images[0]->image ?? '') }}"
+                                                           width="600" height="600">
                                                         </a>
 
 
@@ -170,6 +171,7 @@
                                                             </form>
 
                                                             <a class="removeFromWishlist addToWishlist  wishlistProd_22" href="#"
+                                                             title="Remove From My Wishlists"
                                                                data-product-id="{{$product -> id}}">
                                                                 <i class="fa fa-heart"></i>
                                                                 <span>remove to Wishlist</span>
@@ -250,6 +252,17 @@
             @endguest
 
 
+           /*  $.ajax({
+                type: 'delete',
+                url: "{{Route('wishlist.destroy')}}",
+                data: {
+                    'productId': $(this).attr('data-product-id'),
+                },
+                success: function (data) {
+                    location.reload();
+                }
+            }); */
+
             $.ajax({
                 type: 'delete',
                 url: "{{Route('wishlist.destroy')}}",
@@ -258,6 +271,7 @@
                 },
                 success: function (data) {
                     location.reload();
+
                 }
             });
         });

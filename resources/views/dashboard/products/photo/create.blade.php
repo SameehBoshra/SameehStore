@@ -51,7 +51,7 @@
                                               enctype="multipart/form-data">
                                             @csrf
                                             <input type="hidden" name="product_id"  value="{{$id}}">
-                                            <div class="form-group">
+                                           <div class="form-group">
                                                 <label> {{trans('msg.uploadPhoto')}}  </label>
                                                 <label id="projectinput7" class="file center-block" >
                                                     <input type="file" id="file" name="image" multiple>
@@ -61,6 +61,18 @@
                                                 @error("image")
                                                 <span class="text-danger"> {{$message}}</span>
                                                 @enderror
+
+                                              {{--   <div class="form-body">
+
+                                                    <h4 class="form-section"><i class="ft-home"></i> صور ألاسليدر </h4>
+                                                    <div class="form-group">
+                                                        <div id="dpz-multiple-files" class="dropzone dropzone-area">
+                                                            <div class="dz-message">يمكنك رفع اكثر من صوره هنا</div>
+                                                        </div>
+                                                        <br><br>
+                                                    </div>
+                                                </div> --}}
+
 
                                             <div class="form-actions">
                                                 <button type="button" class="btn btn-warning mr-1"
@@ -105,3 +117,5 @@
     );
 </script>
 @stop
+
+

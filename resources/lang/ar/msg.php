@@ -2,6 +2,9 @@
 return [
 'login'=>'تسجيل دخول ',
 'register'=>'انشاء حساب ',
+'or'=>'أو',
+'logout'=>'تسجيل خروج',
+'email'=>'اﻷيميل اﻷلكتروني ',
 'dashboardenter'=>'الدخول للوحة التحكم',
 'enteremail'=>'أدخل الايميل الالكنروني ',
 'enterpassword'=>'أدخل الباسورد ',
@@ -45,7 +48,7 @@ return [
 'editprofile'=>'تعديل الملف الشخصي  ',
 'ar'=>'العربية',
 'main'=>'الرئيسية',
-'name'=>'الاسم ',
+'name'=>'الاسم',
 'email'=>'الايميل الالكتروني',
 'newpassword'=>'كلمة المرور الجديدة',
 'confirmpassword'=>' تاكيد كلمة المرور',
@@ -194,6 +197,34 @@ return [
 
 
 
+///silder
+
+'silderpage'=>'الاسليدر',
+'silderimage'=>'صور الاسيلدر',
+'yuocanloadmoreonephoto'=>'يمكن رفع صورة أو اكثر  ',
+
+// roles
+'permissions'=>'الصلاحيات',
+'allpermissions'=>'جميع الصلاحيات ',
+'addpermission'=>'أضافة صلاحيات ',
+'datapermission'=>'بيانات الصلاحيات',
+'nameofpermission'=>'أسم الصلاحية ',
+
+
+
+// dashboarduser
+'dashboarduser'=>'مستخدمي لوحة التحكم ',
+'alldashboarduser'=>'جميع مستخدمي لوحة التحكم   ',
+'adddashboarduser'=>'أضافة مستخدم لوحة التحكم ',
+'editdashboarduser'=>'تعديل بيانات مستخم لوحة التحكم',
+
+'data'=>'بيانات مستخدمي لوحة التحكم ',
+'choosepermission'=>'أختر الصلاحيات',
+'pleasechoosepermission'=>'من فضلك أختر الصلاحيات' ,
+
+
+// front
+'callcustomerservices'=>' :ألاتصال بخدمة اﻷعملاء',
 
 
 

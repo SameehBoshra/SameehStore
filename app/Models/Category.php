@@ -38,6 +38,12 @@ class Category extends Model
         return $query;
       }
 
+      public function getPhoto($value)
+      {
+        return ($value!==Null)?asset('assests/images/categorys/'.$value):"";
+
+      }
+
       public function _parent()
       {
         return $this->belongsTo(self::class , 'parent_id');
@@ -49,6 +55,14 @@ class Category extends Model
 
     }
 
+   //get all childrens=
+   public function childrens(){
+    return $this -> hasMany(Self::class,'parent_id');
+}
 
+public function products()
+{
+    return $this -> belongsToMany(Product::class,'product_categories');
+}
 
 }

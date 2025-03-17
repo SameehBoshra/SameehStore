@@ -62,7 +62,7 @@
                                                         <td>{{ $category->slug }}</td>
                                                         <td>{{ $category->getActive() }}</td>
                                                         <td>
-                                                            <img style="width: 150px; height: 100px;" src="" alt=" {{trans('msg.partphoto')}}">
+                                                            <img name="photo" style="width: 150px; height: 100px;" src="{{asset($category->photo)}}" alt="">
                                                         </td>
                                                         <td>
                                                             <div class="btn-group" role="group" aria-label="Basic example">

@@ -95,16 +95,17 @@
                                                     <div class="thumbnail-container">
                                                         <a href="{{route('product.details',$product -> slug)}}"
                                                            class="thumbnail product-thumbnail two-image">
-                                                            <img class="img-fluid image-cover"
-                                                                 src="{{$product -> images[0] -> photo ?? ''}}"
-                                                                 alt=""
-                                                                 data-full-size-image-url="{{$product -> images[0] -> photo ?? ''}}"
-                                                                 width="600" height="600">
-                                                            <img class="img-fluid image-secondary"
-                                                                 src="{{$product -> images[0] -> photo ?? ''}}"
-                                                                 alt=""
-                                                                 data-full-size-image-url="{{$product -> images[0] -> photo ?? ''}}"
-                                                                 width="600" height="600">
+                                                           <img class="img-fluid image-cover"
+                                                           src="{{ asset($product->images[0]->image ?? '') }}"
+                                                           alt=""
+                                                           data-full-size-image-url="{{ asset($product->images[0]->image ?? '') }}"
+                                                           width="600" height="600">
+
+                                                      <img class="img-fluid image-secondary"
+                                                           src="{{ asset($product->images[0]->image ?? '') }}"
+                                                           alt=""
+                                                           data-full-size-image-url="{{ asset($product->images[0]->image ?? '') }}"
+                                                           width="600" height="600">
                                                         </a>
 
 
@@ -147,7 +148,7 @@
                                                                           class="price">{{$product -> special_price ?? $product -> price }}</span>
                                                                     @if($product -> special_price)
                                                                         <span
-                                                                            class="regular-price">{{$product -> price}}</span>
+                                                                            class="regular-price">{{$product ->price}}</span>
                                                                     @endif
 
                                                                 </div>
@@ -160,25 +161,51 @@
                                                         <div class="product-buttons d-flex justify-content-center"
                                                              itemprop="offers" itemscope=""
                                                              itemtype="http://schema.org/Offer">
-                                                            <form
-                                                                action=""
-                                                                method="post" class="formAddToCart">
+                                                    {{--          <form method="POST" class="formAddToCart">
                                                                 @csrf
-                                                                <input type="hidden" name="id_product"
-                                                                       value="{{$product -> id}}">
-                                                                <a class="add-to-cart cart-addition" data-product-id="{{$product -> id}}" data-product-slug="{{$product -> slug}}" href="#"
-                                                                   data-button-action="add-to-cart"><i
-                                                                        class="novicon-cart"></i><span>Add to cart</span></a>
+                                                                <input type="hidden" name="id_product" value="{{ $product->id }}">
+                                                                <meta name="csrf-token" content="{{ csrf_token() }}">
+                                                                <a class="add-to-cart cart-addition"
+                                                                   data-product-id="{{ $product->id }}"
+                                                                   data-product-slug="{{ $product->slug }}"
+                                                                   href="#"
+                                                                   data-button-action="add-to-cart">
+                                                                   <i class="novicon-cart"></i>
+                                                                   <span>اضافة للسلة</span>
+                                                                </a>
+                                                            </form> --}}
+
+                                                         {{--    <form action="{{ route('site.cart.add') }}" method="POST">
+                                                                @csrf
+                                                                <input type="hidden" name="product_id" value="{{ $product->id }}">
+                                                                <input type="hidden" name="product_slug" value="{{ $product->slug }}">
+
+                                                                <button type="submit" class="cart-addition">
+                                                                    <i class="novicon-cart"></i> <span>إضافة إلى السلة</span>
+                                                                </button>
                                                             </form>
+ --}}
+{{--   <form
+ action=""
+ method="POST" class="formAddToCart">
+ @csrf
+ @method('POST')
+ <input type="hidden" name="id_product"
+        value="{{$product -> id}}">
+ <a class="add-to-cart cart-addition" data-product-id="{{$product -> id}}" data-product-slug="{{$product -> slug}}" href="#"
+    data-button-action="add-to-cart"><i
+         class="novicon-cart"></i><span>Add to cart</span></a>
+</form> --}}
+
 
                                                             <a class="addToWishlist  wishlistProd_22" href="#"
-                                                               data-product-id="{{$product -> id}}"
+                                                               data-product-id="{{$product ->id}}"
                                                             >
                                                                 <i class="fa fa-heart"></i>
                                                                 <span>Add to Wishlist</span>
                                                             </a>
                                                             <a href="#" class="quick-view hidden-sm-down"
-                                                               data-product-id="{{$product -> id}}">
+                                                               data-product-id="{{$product ->id}}">
                                                                 <i class="fa fa-search"></i><span> Quick view</span>
                                                             </a>
                                                         </div>
@@ -247,12 +274,17 @@
             }
         });
 
+
+
+
         $(document).on('click', '.addToWishlist', function (e) {
             e.preventDefault();
 
             @guest()
-                $('.not-loggedin-modal').css('display','block');
+            $('.not-loggedin-modal').css('display', 'block');
             @endguest
+
+
             $.ajax({
                 type: 'post',
                 url: "{{Route('wishlist.store')}}",
@@ -260,29 +292,62 @@
                     'productId': $(this).attr('data-product-id'),
                 },
                 success: function (data) {
-                    if(data.wished )
-                    $('.alert-modal').css('display','block');
+                    if (data.wished)
+                        $('.alert-modal').css('display', 'block');
                     else
-                        $('.alert-modal2').css('display','block');
+                        $('.alert-modal2').css('display', 'block');
                 }
             });
         });
 
-        $(document).on('click', '.cart-addition', function (e) {
-            e.preventDefault();
 
-            $.ajax({
-                type: 'post',
-                url: "{{Route('site.cart.add')}}",
-                data: {
-                    'product_id': $(this).attr('data-product-id'),
-                    'product_slug' : $(this).attr('data-product-slug'),
-                },
-                success: function (data) {
 
-                }
-            });
-        });
+
+
+  /*   $(document).on('click', '.cart-addition', function (e) {
+    e.preventDefault();
+
+    $.ajax({
+        type: 'POST',
+        url: {{route('site.cart.add')}}, // تأكد من صحة الراوت
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        data: {
+            product_id: $(this).data('product-id'),
+            product_slug: $(this).data('product-slug'),
+        },
+        success: function (response) {
+            if (response.success) {
+                $('.alert-modal').css('display', 'block');
+            } else {
+                $('.alert-modal2').css('display', 'block');
+            }
+        },
+        error: function (xhr) {
+            console.error(xhr.responseText);
+            alert('حدث خطأ أثناء إضافة المنتج إلى السلة!');
+        }
+    });
+}); */
+
+/*
+$(document).on('click', '.cart-addition', function (e) {
+    e.preventDefault();
+
+    // العثور على النموذج الخاص بالمنتج
+    let form = $(this).closest('form');
+
+    // إرسال النموذج إلى السيرفر
+    form.submit();
+});
+
+*/
+
+
+
+
+
     </script>
 
 @stop

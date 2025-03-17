@@ -10,6 +10,8 @@
 
 
     <title>Prestashop_Savemart</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <meta name="description" content="Shop powered by PrestaShop">
     <meta name="keywords" content="">
     <meta name="csrf-token" content="{{csrf_token()}}">
@@ -20,6 +22,7 @@
     <link href="{{asset('assets/front/css/css-1.css')}}?family=Oswald:300,400,500,600,700,900" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('assets/front/themes/vinova_savemart/assets/cache/theme-78026624.css')}}"
           type="text/css" media="all">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome.min.css">
 
 
     <script type="text/javascript">

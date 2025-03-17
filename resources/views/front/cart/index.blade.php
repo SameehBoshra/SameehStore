@@ -7,8 +7,8 @@
 
                 <ol itemscope="" itemtype="http://schema.org/BreadcrumbList">
                     <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                        <a itemprop="item" href="index-11.htm">
-                            <span itemprop="name">Home</span>
+                        <a itemprop="item" href="{{route('home')}}">
+                            <span itemprop="name" >Home</span>
                         </a>
                         <meta itemprop="position" content="1">
                     </li>
@@ -146,8 +146,8 @@
 
 
                                 <div class="checkout text-xs-center card-block">
-                                    <a href="{{route('payment',$basket -> subTotal())}}" type="button" class="btn btn-primary"> proceed to payment
-                                    </a>
+                                   {{--  <a href="{{route('payment',$basket -> subTotal())}}" type="button" class="btn btn-primary"> proceed to payment
+                                    </a> --}}
                                 </div>
 
 

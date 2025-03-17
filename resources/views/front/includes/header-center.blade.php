@@ -5,17 +5,18 @@
                  class="contentsticky_logo d-flex align-items-center justify-content-start col-lg-3 col-md-3">
                 <a href="">
                     <img class="logo img-fluid"
-                         src="http://demo.bestprestashoptheme.com/savemart/modules/novthemeconfig/images/logos/logo-1.png"
-                         alt="Prestashop_Savemart">
+                    src="{{asset('assets/images/sameeh.png')}}" height="50" width="50"  alt=""
+                    style="border-radius: 50%;"
+                    >
                 </a>
             </div>
             <div class="col-lg-9 col-md-9 header-menu d-flex align-items-center justify-content-end">
                 <div class="data-contact d-flex align-items-center">
                     <div class="title-icon">support<i class="icon-support icon-address"></i></div>
                     <div class="content-data-contact">
-                        <div class="support">Call customer services :</div>
+                        <div class="support">{{ trans('msg.callcustomerservices') }}</div>
                         <div class="phone-support">
-                            1234 567 899
+                            01284638552
                         </div>
                     </div>
                 </div>
@@ -25,7 +26,7 @@
                                 class="header-icon-account"></i></a>
                     </div>
                     <div class="header_link_wishlist">
-                        <a href="" title="My Wishlists">
+                        <a href="{{route('wishlist.products.index')}}" title="My Wishlists">
                             <i class="header-icon-wishlist"></i>
                         </a>
                     </div>
@@ -33,7 +34,7 @@
                         <div class="blockcart cart-preview active" data-refresh-url="">
                             <div class="header-cart">
                                 <div class="cart-left">
-                                    <a href="" title="My Wishlists">
+                                    <a href="{{route('site.cart.index')}}" title="My Shopping">
                                         <div class="shopping-cart">
                                             <i class="zmdi zmdi-shopping-cart"></i>
 

@@ -43,4 +43,32 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+
+    public function VerfiyCodes()
+    {
+        return $this->hasMany(UsersVerficationCodes::class ,'user_id');
+    }
+
+    public function wishlist()
+    {
+        return $this->belongsToMany(Product::class, 'wish_lists');
+    }
+
+    public function wishlistHas($productId)
+    {
+        return $this->wishlist()->where('product_id' ,$productId)->exists();
+    }
+
+
+
+    public function cart()
+    {
+        return $this->belongsToMany(Product::class, 'carts');
+    }
+
+    public function carttHas($productId)
+    {
+        return self::cart()->where('product_id' ,$productId)->exists();
+    }
 }

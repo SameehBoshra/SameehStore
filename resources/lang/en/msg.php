@@ -1,7 +1,10 @@
 <?php
 return [
-'login'=>'login  ',
-'register'=>' register ',
+'login'=>'Login  ',
+'register'=>' Register ',
+'or'=>'or',
+'logout'=>'Logout',
+'email'=>'Email :',
 'sameeh'=>'sameeh',
 'Dashboard'=>'Dashboard',
 'home'=>'Home',
@@ -23,6 +26,7 @@ return [
 'Password'=>'Password',
 'Confirm Password'=>'Confirm Password',
 'order_sale'=>' All Order',
+'customernumber'=>'Customer Number',
 'setting'=>'Settings',
 'Shipping'=>'Shipping Method',
 'shippingfree'=>'Free Shipping' ,
@@ -195,9 +199,31 @@ return [
 'AddOption'=>'Add Option',
 
 
+///silder
+
+'silderpage'=>'Silder Page',
+'silderimage'=>'Silder Images',
+'yuocanloadmoreonephoto'=>'You can load one or more image ',
+// roles
+'permissions'=>'Permissions',
+'addpermission'=>'Add Permission',
+'allpermissions'=>'All Permissions',
+'nameofpermission'=>'Name Of Permission ',
+'datapermission'=>'Data Of Permissions',
 
 
+// dashboarduser
+'dashboarduser'=>'Dashboard Users',
+'alldashboarduser'=>'All Dashboard Users',
+'adddashboarduser'=>'Add Dashboard User',
+'editdashboarduser'=>'Edit Dashboard User',
 
+'data'=>'Data Of Dashboard User',
+'choosepermission'=>'Choose Permission',
+'pleasechoosepermission'=>'Please Choose Permission' ,
+
+// front
+'callcustomerservices'=>'Call customer services :',
 
 
 ];

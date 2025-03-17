@@ -13,9 +13,15 @@
                             <div id="verticalmenu" class="verticalmenu" role="navigation">
                                 <ul class="menu level1">
 
+
                                     @isset($categories)
                                         @foreach($categories as $category)
-                                            <li class="item  parent"><a href="{{route('category',$category -> slug )}}" title="Laptops &amp; Accessories"><i
+
+                                          <li class="item  parent">
+                                            <i class="la la-group"></i>
+                                            <a href="{{route('category',$category -> slug )}}" title="Laptops &amp; Accessories">
+                                                <i class="la la-group"></i>
+                                            <i
                                                         class="hasicon nov-icon"
                                                         style="background:url('http://demo.bestprestashoptheme.com/savemart/themes/vinova_savemart/assets/img/modules/novverticalmenu/icon/laptop.png') no-repeat scroll center center;">
 
@@ -31,6 +37,7 @@
                                                                 <li class="item ">
                                                                 <li class="item  parent">
                                                                     <a href="{{route('category',$childern -> slug )}}"
+
                                                                        title="Laptop Thinkpad">{{$childern -> name}}</a>
                                                                     @isset($childern -> childrens )
                                                                         <span class="show-sub fa-active-sub"></span>
@@ -38,6 +45,7 @@
                                                                             <ul>
                                                                                 @foreach($childern -> childrens  as $_childern)
                                                                                     <li class="item ">
+                                                                                        {{--     <a href="{{route('category',$_childern -> slug )}}" --}}
                                                                                         <a href="{{route('category',$_childern -> slug )}}"
                                                                                            title="Aliquam lobortis">
                                                                                             {{$_childern -> name}}

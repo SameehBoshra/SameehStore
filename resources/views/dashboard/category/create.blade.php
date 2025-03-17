@@ -50,6 +50,8 @@
                                               method="POST"
                                               enctype="multipart/form-data">
                                             @csrf
+
+
                                             <div class="form-group">
                                                 <label> صوره القسم </label>
                                                 <label id="projectinput7" class="file center-block">
@@ -60,6 +62,8 @@
                                                 <span class="text-danger">{{$message}}</span>
                                                 @enderror
                                             </div>
+
+
 
                                             <div class="form-body">
 

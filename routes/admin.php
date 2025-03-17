@@ -5,12 +5,16 @@ use App\Http\Controllers\Dashboard\LoginController;
 use App\Http\Controllers\Dashboard\MainCategoryController;
 use App\Http\Controllers\Dashboard\SubCategoryController;
 use App\Http\Controllers\Dashboard\BrandController;
+use App\Http\Controllers\Dashboard\SliderController;
 use App\Http\Controllers\Dashboard\ProfileController;
 use App\Http\Controllers\Dashboard\ShippingMethodController;
 use App\Http\Controllers\Dashboard\TagController;
 use App\Http\Controllers\Dashboard\ProductController;
 use App\Http\Controllers\Dashboard\AttributeController;
 use App\Http\Controllers\Dashboard\OptionController;
+use App\Http\Controllers\Dashboard\RolesController;
+use App\Http\Controllers\Dashboard\UsersController;
+
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Illuminate\Support\Facades\Auth;
@@ -77,7 +81,7 @@ Route::group(['namespace'=>'Dashboard' , 'middleware'=>'auth:admin' ,'perfix'=>'
     });
 
 ######################## route category################
-    Route::group(['prefix'=>'category'] , function()
+    Route::group(['prefix'=>'categories'] , function()
     {
         Route::get('/', [MainCategoryController::class ,'index'])->name('dashboard.Category.index');
         Route::get('create', [MainCategoryController::class ,'create'])->name('dashboard.Category.create');
@@ -146,6 +150,13 @@ Route::group(['prefix'=>'brands'] , function()
         Route::get('photo/{id}', [ProductController::class ,'photoCreate'])->name('dashboard.product.photo.create');
         Route::post('photo/{id}', [ProductController::class , 'photoStore'])->name('dashboard.product.photo.store');
 
+        ///
+        Route::post('photo', [SliderController::class ,'saveProductImages'])->name('dashboard.product.photos.store');
+        Route::post('photo/db', [SliderController::class ,'saveProductImagesDB'])->name('dashboard.product.photos.store.db');
+
+
+
+        ///
         Route::get('edit/{id}', [ProductController::class ,'edit'])->name('dashboard.product.edit');
         Route::post('update/{id}', [ProductController::class ,'update'])->name('dashboard.product.update');
         Route::get('destroy/{id}', [ProductController::class ,'destroy'])->name('dashboard.product.destroy');
@@ -177,8 +188,43 @@ Route::group( ['prefix' => 'options'] ,function()
     Route::get('destroy/{id}', [OptionController::class ,'destroy'])->name('dashboard.option.destroy');
 });
 ######################## end options################
+########################  main slider  ################
+Route::group( ['prefix' => 'sliders'] ,function()
+{
+
+    Route::get('/', [SliderController::class ,'addImages'])->name('admin.sliders.create');
+    Route::post('images', [SliderController::class ,'saveSliderImages'])->name('admin.sliders.images.store');
+    Route::post('images/db', [SliderController::class ,'saveSliderImagesDB'])->name('admin.sliders.images.store.db');
 
 
+});
+######################## end main slider ################
+
+ ################################## roles ######################################
+ Route::group(['prefix' => 'roles'], function () {
+    Route::get('/', [RolesController::class ,'index'])->name('dashboard.roles.index');
+    Route::get('create', [RolesController::class,'create'])->name('dashboard.roles.create');
+    Route::post('store', [RolesController::class ,'saveRole'])->name('dashboard.roles.store');
+    Route::get('/edit/{id}', [RolesController::class,'edit']) ->name('dashboard.roles.edit') ;
+    Route::post('update/{id}', [RolesController::class,'update'])->name('dashboard.roles.update');
+    Route::get('destroy/{id}', [RolesController::class ,'destroy'])->name('dashboard.roles.destroy');
+
+ });
+################################## end roles ######################################
+
+################################## users ######################################
+
+Route::group(['prefix' => 'users' ], function () {
+    Route::get('/', [UsersController::class ,'index'])->name('dashboard.users.index');
+    Route::get('/create', [UsersController::class , 'create'])->name('dashboard.users.create');
+    Route::post('/store', [UsersController::class ,'store'])->name('dashboard.users.store');
+    Route::get('/edit/{id}', [UsersController::class,'edit']) ->name('dashboard.users.edit') ;
+    Route::post('update/{id}', [UsersController::class,'update'])->name('dashboard.users.update');
+    Route::get('destroy/{id}', [UsersController::class ,'destroy'])->name('dashboard.users.destroy');
+});
+
+
+################################## end users ######################################
 
 });
 

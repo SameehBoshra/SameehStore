@@ -11,6 +11,7 @@ use App\Models\ImageProduct;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\ProductImagesRequest;
 use DB;
 
 class ProductController extends Controller
@@ -39,7 +40,7 @@ public function store(Request $request)
 
     //dd('request');
 
-   try {
+  // try {
         // Validate input
         $validator = Validator::make($request->all(), [
 
@@ -69,10 +70,10 @@ public function store(Request $request)
    // DB::commit();
 
         return redirect()->route('dashboard.product.index')->with(['success' => trans('msg.messageadd')]);
-   } catch (\Exception $ex) {
+  // } catch (\Exception $ex) {
    // DB::rollBack();
         return redirect()->route('dashboard.product.index')->with(['error' => trans('msg.Somethingwrong')]);
-  }
+  //}
 
 
 }
@@ -171,32 +172,88 @@ public function storePrice(Request $request)
     }
     public function photoStore(Request $request)
     {
-      //  dd($request->all());
-       //try {
+       try {
             // Validate input
             $validator = Validator::make($request->all(), [
                 'product_id' => 'required|exists:products,id',
                 'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Validate file
 
             ]);
-            if ($validator->fails()) {
+
+
+            if ($validator->fails())
+            {
                 return redirect()->back()->withErrors($validator)->withInput();
             }
-            // update product
-         //   DB::beginTransaction();
-            ImageProduct::create($request->only(['product_id','image']));
 
+            if ($request->hasFile('image')) {
+                $file = $request->file('image');
+                $filename = time() . '_' . $file->getClientOriginalName(); // Generate unique filename
+                $path = 'assets/images/imageProduct/'; // Define storage path
+                $file->move(public_path($path), $filename); // Move file to public folder
 
-          //  DB::commit();
+                // Save image in the database
+                ImageProduct::create([
+                    'product_id' => $request->product_id,
+                    'image' => $path . $filename, // Store relative path in the database
+                ]);
+            }
 
             return redirect()->route('dashboard.product.index')->with(['success' => trans('msg.messageadd')]);
-      //  } catch (\Exception $ex) {
+      } catch (\Exception $ex)
+      {
          //   DB::rollBack();
             return redirect()->route('dashboard.product.index')->with(['error' => trans('msg.Somethingwrong')]);
-      //  }
+      }
     }
 
 
+######################################################################3
+public function saveProductImages(Request $request)
+{
+    return $request;
+
+    $file = $request->file('dzfile');
+    $filename = uploadImage('Products', $file);
+
+    return response()->json([
+        'name' => $filename,
+        'original_name' => $file->getClientOriginalName(),
+    ]);
+
+}
+
+public function saveProductImagesDB(Request $request)
+{
+    try {
+        // Validate request
+        $validator = Validator::make($request->all(), [
+            'product_id' => 'required|exists:products,id',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Validate file
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        // Store the image and get the filename
+        $file = $request->file('image');
+        $filename = uploadImage('Products', $file); // Ensure `uploadImage` properly stores and returns filename
+
+        // Save image in the database
+        ImageProduct::create([
+            'product_id' => $request->product_id,
+            'image' => $filename, // Save the stored image filename
+        ]);
+
+        return redirect()->route('dashboard.product.index')->with(['success' => trans('msg.messageadd')]);
+
+    } catch (\Exception $ex) {
+        return redirect()->route('dashboard.product.index')->with(['error' => trans('msg.Somethingwrong')]);
+    }
+}
+
+#################################################333
     public function show(string $id)
     {
         //

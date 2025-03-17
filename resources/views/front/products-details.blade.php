@@ -42,7 +42,7 @@
                                         <div class="images-container list_thumb">
                                             <div class="product-cover">
                                                 <img class="js-qv-product-cover img-fluid"
-                                                     src="{{$product -> images[0] -> photo ?? ''}}"
+                                                     src="{{asset($product ->images[0] ->image ?? '')}}"
                                                      alt="" title="" style="width:100%;" itemprop="image">
                                                 <div class="layer hidden-sm-down" data-toggle="modal"
                                                      data-target="#product-modal">
@@ -50,15 +50,15 @@
                                                 </div>
                                             </div>
 
-                                            <div class="js-qv-mask mask only-product">
+                                             <div class="js-qv-mask mask only-product">
                                                 <div class="row">
                                                     @isset($product -> images)
                                                         @foreach($product -> images as $image)
                                                             <div class="item thumb-container col-md-6 col-xs-12 pt-30">
                                                                 <img class="img-fluid thumb js-thumb  selected "
-                                                                     data-image-medium-src="{{$image -> photo}}"
-                                                                     data-image-large-src="{{$image -> photo}}"
-                                                                     src="{{$image -> photo}}"
+                                                                     data-image-medium-src="{{$image ->image}}"
+                                                                     data-image-large-src="{{$image ->image}}"
+                                                                     src="{{asset($image ->image)}}"
                                                                      alt="" title="" itemprop="image">
                                                             </div>
                                                         @endforeach
@@ -72,7 +72,9 @@
                                 <div class="col-lg-7 col-md-8 col-xs-12 mt-sm-20">
                                     <div class="product-information">
                                         <div class="product-actions">
-                                            <form action="{{route('products.reviews.store',$product -> id )}}"
+{{--                                             <form action="{{route('products.reviews.store',$product -> id )}}"
+ --}}                                            <form action=""
+
                                                   method="post" id="add-to-cart-or-refresh" class="row">
                                                 @csrf
                                                 <input type="hidden" name="id_product" value="{{$product -> id }}"
@@ -438,6 +440,7 @@
                     </div>
 
                     <div class="product-detail-bottom">
+                        {{--
                         <div class="container">
 
                             <section class="relate-product product-accessories clearfix">
@@ -466,12 +469,12 @@
                                                     <img class="img-fluid image-cover"
                                                          src="{{$_product -> images[0] -> photo ?? ''}}"
                                                          alt=""
-                                                         data-full-size-image-url="{{$product -> images[0] -> photo ?? ''}}"
+                                                         data-full-size-image-url="{{asset($product ->images[0] ->image ?? ''}}"
                                                          width="600" height="600">
                                                     <img class="img-fluid image-secondary"
-                                                         src="{{$_product -> images[0] -> photo ?? ''}}"
+                                                         src="{{$_product ->images[0] ->image ?? ''}}"
                                                          alt=""
-                                                         data-full-size-image-url="{{$_product -> images[0] -> photo ?? ''}}"
+                                                         data-full-size-image-url="{{asset($_product ->images[0] ->image ?? '')}}"
                                                          width="600" height="600">
                                                 </a>
 
@@ -519,6 +522,7 @@
                                 @endif
                             </section>
                         </div>
+                        --}}
                     </div>
                 </section>
             </div>
