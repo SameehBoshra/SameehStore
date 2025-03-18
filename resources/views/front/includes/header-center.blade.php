@@ -5,7 +5,7 @@
                  class="contentsticky_logo d-flex align-items-center justify-content-start col-lg-3 col-md-3">
                 <a href="">
                     <img class="logo img-fluid"
-                    src="{{asset('assets/images/sameeh.png')}}" height="50" width="50"  alt=""
+                    src="{{asset('assets/admin/logo2.jpg')}}" height="50" width="50"  alt=""
                     style="border-radius: 50%;"
                     >
                 </a>
@@ -22,7 +22,7 @@
                 </div>
                 <div class="contentsticky_group d-flex justify-content-end">
                     <div class="header_link_myaccount">
-                        <a class="login" href="login-1.html" rel="nofollow" title="Log in to your customer account"><i
+                        <a class="login" href="{{route('login')}}" rel="nofollow" title="Log in to your customer account"><i
                                 class="header-icon-account"></i></a>
                     </div>
                     <div class="header_link_wishlist">
@@ -30,7 +30,7 @@
                             <i class="header-icon-wishlist"></i>
                         </a>
                     </div>
-                    <div id="_desktop_cart">
+                   {{--  <div id="_desktop_cart">
                         <div class="blockcart cart-preview active" data-refresh-url="">
                             <div class="header-cart">
                                 <div class="cart-left">
@@ -47,7 +47,7 @@
                                     <span class="title-cart">Cart</span>
                                     <span class="cart-item"> items</span>
                                 </div>
-                            </div>
+                            </div> --}}
 
                         </div>
                     </div>

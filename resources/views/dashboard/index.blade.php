@@ -15,7 +15,7 @@
                             <div class="card-body">
                               <div class="media d-flex">
                                 <div class="media-body text-left">
-                                  <h3 class="info">11850$</h3>
+                                  <h3 class="info">{{ App\Models\Order::sum('price') }} EG</h3>
                                   <h6>{{trans('msg.allseller')}}</h6>
                                 </div>
                                 <div>
@@ -36,7 +36,7 @@
                             <div class="card-body">
                               <div class="media d-flex">
                                 <div class="media-body text-left">
-                                  <h3 class="warning">$748</h3>
+                                  <h3 class="warning">{{ App\Models\Order::count() }}</h3>
                                   <h6>{{trans('msg.allproduct')}}</h6>
                                 </div>
                                 <div>
@@ -108,21 +108,24 @@
                                 <table class="table table-de mb-0">
                                     <thead>
                                         <tr>
-                                            <th>الطلب</th>
-                                            <th>العميل</th>
-                                            <th>السعر</th>
-                                            <th>حاله الطلب</th>
-                                            <th>الاجمالي($)</th>
+                                            <th>{{trans('msg.order')}}</th>
+                                            <th>{{trans('msg.customer')}}</th>
+                                            <th>{{trans('msg.price')}}</th>
+                                            <th>{{trans('msg.orderStatus')}}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($orders as $order)
                                         <tr class="bg-success bg-lighten-5">
-                                            <td>10583</td>
-                                            <td>سميح بشري</td>
-                                            <td>$100</td>
-                                            <td>مكتمل</td>
-                                            <td>$4762.53</td>
+
+                                            <td >{{$order->order}}</td>
+                                            <td>{{$order->customer}}</td>
+                                            <td>{{$order->price}}</td>
+                                            <td>{{$order->orderStatus}}</td>
+
+
                                         </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -133,24 +136,26 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">أحدث التقييمات</h4>
+                            <h4 class="card-title">{{trans('msg.latestReview')}}</h4>
                         </div>
                         <div class="card-content">
                             <div class="table-responsive">
                                 <table class="table table-de mb-0">
                                     <thead>
                                         <tr>
-                                            <th>العميل</th>
-                                            <th>المنتج</th>
-                                            <th>التقييم</th>
+                                            <th>{{trans('msg.customer')}}</th>
+                                            <th>{{trans('msg.product')}}</th>
+                                            <th>{{trans('review')}}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach($reviews as $review)
                                         <tr class="bg-danger bg-lighten-5">
-                                            <td>سميح بشري</td>
-                                            <td>ساعة يد</td>
-                                            <td>جيدة</td>
+                                            <td> {{$review->customer}}</td>
+                                            <td> {{$review->product}}</td>
+                                            <td>{{$review->review}}</td>
                                         </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

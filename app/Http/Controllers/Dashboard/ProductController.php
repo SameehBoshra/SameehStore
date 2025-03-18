@@ -176,7 +176,7 @@ public function storePrice(Request $request)
             // Validate input
             $validator = Validator::make($request->all(), [
                 'product_id' => 'required|exists:products,id',
-                'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Validate file
+                'image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048', // Validate file
 
             ]);
 
@@ -229,7 +229,7 @@ public function saveProductImagesDB(Request $request)
         // Validate request
         $validator = Validator::make($request->all(), [
             'product_id' => 'required|exists:products,id',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Validate file
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:2048', // Validate file
         ]);
 
         if ($validator->fails()) {
@@ -280,7 +280,7 @@ public function saveProductImagesDB(Request $request)
       try{
         $valid = [
             'name' => 'required|min:3|max:100' ,
-            'photo' => 'required_without:id|image|mimes:jpeg,png,jpg,gif|max:2048', // Validate file
+            'photo' => 'required_without:id|image|mimes:jpeg,png,jpg,gif,webp|max:2048', // Validate file
         ];
         $errormsg = [
 

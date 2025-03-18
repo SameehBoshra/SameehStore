@@ -140,12 +140,12 @@
                                                             </div>
 
                                                             <div class="product-title" itemprop="name"><a
-                                                                    href="{{route('product.details',$product -> slug)}}">{{$product -> name}}</a></div>
+                                                                    href="{{route('product.details',$product -> slug)}}">{{$product ->name}}</a></div>
 
                                                             <div class="product-group-price">
                                                                 <div class="product-price-and-shipping">
                                                                     <span itemprop="price"
-                                                                          class="price">{{$product -> special_price ?? $product -> price }}</span>
+                                                                          class="price">{{$product -> special_price ?? $product ->price }}</span>
                                                                     @if($product -> special_price)
                                                                         <span
                                                                             class="regular-price">{{$product ->price}}</span>

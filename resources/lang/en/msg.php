@@ -12,7 +12,13 @@ return [
 'enteremail'=>'Enter Email ',
 'enterpassword'=>'Enter password ',
 'rememberme'=>'Remember Me ',
-
+'order'=>'Order',
+'customer'=>'Customer',
+'orderStatus'=>'OrderStatus',
+'total'=>'Total',
+'latestReview'=>'LatestReview',
+'product'=>'Product',
+'review'=>'Review',
 
     'fname'=>'first name',
 'lname'=>'last name' ,

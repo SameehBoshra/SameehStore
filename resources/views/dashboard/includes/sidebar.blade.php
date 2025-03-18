@@ -19,8 +19,8 @@
     <div class="main-menu-content hidden-content ">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
 
-            <li class="nav-item active"><a id="main" href=""><i class="la la-mouse-pointer"></i><span
-                        class="menu-title" data-i18n="nav.add_on_drag_drop.main">الرئيسية </span></a>
+            <li class="nav-item active"><a id="main" href="{{route('dashboard.index')}}"><i class="la la-mouse-pointer"></i><span
+                        class="menu-title" data-i18n="nav.add_on_drag_drop.main">{{trans('msg.mainpage')}} </span></a>
             </li>
 
        {{--      <li class="nav-item  open ">
@@ -296,7 +296,7 @@
             @endcan
 
 
-
+{{--
             <li class=" navigation-header">
                 <span data-i18n="nav.category.layouts">Layouts</span><i class="la la-ellipsis-h ft-minus"
                                                                         data-toggle="tooltip"
@@ -1705,6 +1705,7 @@
                     <span class="menu-title" data-i18n="nav.support_documentation.main">Documentation</span>
                 </a>
             </li>
+            --}}
         </ul>
     </div>
 </div>

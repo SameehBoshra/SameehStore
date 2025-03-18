@@ -1,3 +1,5 @@
+
+
 <nav
     class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light bg-info navbar-shadow">
     <div class="navbar-wrapper">
@@ -9,7 +11,7 @@
                 <li class="nav-item">
                     <a class="navbar-brand" href="index.html">
                         <img class="brand-logo" alt="modern admin logo"
-                             src="{{asset('assets/admin/images/logo/logo.png')}}">
+                             src="{{asset('assets/admin/logo2.jpg')}}">
                         <h3 class="brand-text">Modern Admin</h3>
                     </a>
                 </li>
@@ -36,7 +38,7 @@
 
                 </span>
                             <span class="avatar avatar-online">
-                  <img  style="height: 35px;" src="" alt="avatar">
+                  <img  style="height: 35px;" src="{{asset('assets/admin/mohalogo.png')}}" alt="avatar">
                   <i></i></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="{{route('edit.profile',auth('admin')->user()->id)}}"><i
@@ -258,6 +260,23 @@
         </div>
     </div>
 </li>
+
+
+{{-- <li class="dropdown dropdown-user nav-item">
+    <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+<span class="mr-1">
+    <span class="user-name text-bold-700">{{app()->getLocale()==='ar'?trans('msg.ar') : trans('msg.en')}}</span>
+</span>
+    </a>
+        <div class="dropdown-menu dropdown-menu-right">
+            <button class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+</li> --}}
+
+
 
                 </ul>
             </div>

@@ -120,7 +120,7 @@
                                                                    class="switchery" data-color="success"
                                                                    @if($category -> is_active == 1)checked @endif/>
                                                             <label for="is_active"
-                                                                   class="card-title ml-1">{{trans('msg.active')}} </label>
+                                                                   class="card-title ml-1">{{trans('msg.status')}} </label>
 
                                                             @error("is_active")
                                                             <span class="text-danger"> {{$messages}}</span>

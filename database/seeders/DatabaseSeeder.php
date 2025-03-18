@@ -22,6 +22,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call([SettingDataBaseSeeder::class,]);
         $this->call([AdminDatabaseSeeder::class,]);
+        $this->call([OrderDataBaseSeeder::class,]);
+        $this->call([reviewDataBaseSeeder::class,]);
        /*  $this->call([
             CategoryDataBaseSeeder::class,
         ]);  */

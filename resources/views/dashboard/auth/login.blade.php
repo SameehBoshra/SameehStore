@@ -11,7 +11,7 @@ Admin Login
                     <div class="card-header border-0">
                         <div class="card-title text-center">
                             <div class="p-1">
-                                <img src="{{asset('assets/images/sameeh.png')}}" height="50" width="50"  alt=""/>
+                                <img src="{{asset('assets/admin/logo2.jpg')}}" height="50" width="50"  alt=""/>
 
                             </div>
                         </div>
